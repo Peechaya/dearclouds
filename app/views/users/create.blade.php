@@ -28,23 +28,6 @@
 	{{Form::password('password',array('class' => 'form-control'))}}
 </div>
 
-<div class="form-group">
-	{{Form::label('departement','Département*')}}
-	{{Form::text('departement', null,array('class' => 'form-control'))}}
-</div>
-
-<div class="form-group">
-	{{Form::label('name','Prénom')}}
-	{{Form::text('name', null,array('class' => 'form-control'))}}
-</div>
-<div class="form-group">
-	{{Form::label('lastname','Nom')}}
-	{{Form::text('lastname', null,array('class' => 'form-control'))}}
-</div>
-<div class="form-group">
-	{{Form::label('birthdate','Date de naissance')}}
-	{{Form::input('date', 'birthdate', null,array('class' => 'form-control'))}}
-</div>
 
 {{Form::submit('Inscription', array('class' => 'btn btn-primary'))}}
 {{ Form::close() }}

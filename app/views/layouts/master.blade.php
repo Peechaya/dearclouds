@@ -12,14 +12,12 @@
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 
-
+    {{ HTML::style('css/creative.css') }}
     {{ HTML::style('css/bootstrap.css') }}
-    {{ HTML::style('css/bootstrap-theme.css') }}
-    {{ HTML::style('css/basic.css') }}
+    {{ HTML::style('css/font-awesome.css') }}
 
+    {{ HTML::script('js/creative.js') }}
     {{ HTML::script('js/bootstrap.js') }}
-    {{ HTML::script('js/bootstrap.min.js') }}
-    {{ HTML::script('js/jCProgress-1.0.3.js') }}
 
     <style>
     @section('styles')
@@ -50,26 +48,26 @@
 
     <div class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
-    
-    <li></li> 
-    </ul> 
+
+    <li></li>
+    </ul>
 
 
     <div class="navbar-right">
     <ul class="nav navbar-nav">
     @if (Auth::guest())
     <li>{{ HTML::link('admin', 'Administration') }}</li>
-    @else 
+    @else
     <li>{{ HTML::link('logout', 'Se déconnecter') }}</li>
     @endif
     </ul>
     </div>
-    
 
-    
+
+
     </div>
     </div>
-    </div> 
+    </div>
 
 
 
@@ -104,8 +102,8 @@
 
 
     <!-- Scripts -->
-    {{ HTML::script('js/bootstrap.js') }}
-    {{ HTML::script('js/bootstrap.min.js') }}
+    /*{{ HTML::script('js/bootstrap.js') }}
+    {{ HTML::script('js/bootstrap.min.js') }}*/
 
 
 

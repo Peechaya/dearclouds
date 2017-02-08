@@ -8,7 +8,7 @@ class PageController extends BaseController {
 		->orderBy('created_at', 'desc')
 		->paginate(6);
 
-		
+
 
 		return View::make('pages.index', compact('pages'));
 	}
@@ -66,7 +66,7 @@ class PageController extends BaseController {
 
 		$page = Page::find($id);
 
-		if ($page) 
+		if ($page)
 		{
 			return View::make('pages.edit')
 			->with('page', $page);
@@ -91,8 +91,8 @@ class PageController extends BaseController {
 			return Redirect::to('page/' . $id . '/edit')
 			->withErrors($validator)
 			->withInput(Input::except('password'));
-		} 
-		else 
+		}
+		else
 		{
 			$page = Page::find($id);
 			$page->title       	= Input::get('title');

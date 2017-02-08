@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@showIndex');
+Route::resource('users', 'UserController');
 
 Route::get('admin', function()
 {
@@ -21,11 +22,11 @@ Route::post('admin', 'UserController@postLogin');
 Route::get('logout', 'UserController@getLogout');
 
 // Filtre Admin
-Route::group(array('before' => 'admin'), function() 
+Route::group(array('before' => 'admin'), function()
 {
-	Route::resource('users', 'UserController');
+
 	Route::resource('pages', 'PageController');
 	Route::resource('projects', 'ProjectController');
 	// Route::resource('admin', 'AdminController');
-	
+
 });
