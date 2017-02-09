@@ -24,7 +24,7 @@ class ProjectController extends BaseController {
 		$rules = array(
 			'title'   => 'required',
 			'content'      => 'required',
-			'photo'	=> 'required',
+			// 'photo'	=> 'required',
 			// 'file'	=> 'required',
 			'name'  => 'unique:uploads',
 			'size'  => 'max:10000000',
@@ -41,23 +41,25 @@ class ProjectController extends BaseController {
 		else
 		{
 
+			$file = Input::file('file');
+			$destinationPath = 'public/projects/';
+			$filename = str_random(20);
+			$extension = $file->getClientOriginalExtension();
+			$type = $file->getMimeType();
+			$size = Input::file('file')->getSize();
+			$upload_success = Input::file('file')->move($destinationPath, $filename . '.' . $extension);
+			$url = 'projects/' . $filename . '.' . $extension;
+
 			$project = new Project;
 			$project->title      	= Input::get('title');
-			$project->photo 		= Input::get('photo');
+			$project->photo 		= $url;
 			$project->url			= Input::get('url');
 			$project->content		= Input::get('content');
 			$project->user_id 		= Auth::user()->id;
 			$project->categorie     = Input::get('categorie');
 			$project->save();
 
-			// $file = Input::file('file');
-			// $destinationPath = 'public/uploads/';
-			// $filename = str_random(20);
-			// $extension = $file->getClientOriginalExtension(); 
-			// $type = $file->getMimeType();
-			// $size = Input::file('file')->getSize();
-			// $upload_success = Input::file('file')->move($destinationPath, $filename . '.' . $extension);
-			// $url = 'uploads/' . $filename . '.' . $extension;
+
 
 			// $project = new Project;
 			// $project->title      	= Input::get('title');
@@ -68,14 +70,14 @@ class ProjectController extends BaseController {
 			// $project->categorie     = Input::get('categorie');
 			// $project->save();
 
-			// Upload::create([
-			// 	'name'       	=> $filename,
-			// 	'user_id'    	=> Auth::user()->id,
-			// 	'url'        	=> 'uploads/' . $filename . '.' . $extension,
-			// 	'size'			=> $size,
-			// 	'extension'   	=> $file->getClientOriginalExtension(),
-			// 	'type'			=> $type
-			// 	]);
+			Upload::create([
+				'name'       	=> $filename,
+				'user_id'    	=> Auth::user()->id,
+				'url'        	=> 'projects/' . $filename . '.' . $extension,
+				'size'			=> $size,
+				'extension'   	=> $file->getClientOriginalExtension(),
+				'type'			=> $type
+				]);
 
 			return Redirect::to('projects')->with('success', 'Votre project a bien été posté.');
 		}
@@ -95,7 +97,7 @@ class ProjectController extends BaseController {
 
 		$project = Project::find($id);
 
-		if ($project) 
+		if ($project)
 		{
 			return View::make('projects.edit')
 			->with('project', $project);
@@ -120,8 +122,8 @@ class ProjectController extends BaseController {
 			return Redirect::to('project/' . $id . '/edit')
 			->withErrors($validator)
 			->withInput(Input::except('password'));
-		} 
-		else 
+		}
+		else
 		{
 			$project = Project::find($id);
 			$project->title       	= Input::get('title');

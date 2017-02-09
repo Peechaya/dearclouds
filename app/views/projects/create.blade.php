@@ -19,7 +19,9 @@
 	{{ Form::select('categorie', array(
 	'Maquettes' => 'Maquettes',
 	'Webdesign' => 'Webdesign',
-	'Websites' => 'Websites'
+	'Websites' => 'Websites',
+	'Scripts' => 'Scripts',
+	'Translations' => 'Translations'
 	), null, array('class' => 'form-control')) }}
 </div>
 
@@ -35,7 +37,7 @@
 
 <div class="form-group">
 	{{Form::label('photo','Image')}}
-	{{Form::text('photo', null,array('class' => 'form-control'))}}
+	{{ Form::file('file','',array('id'=>'')) }}
 </div>
 
 <div class="form-group">
