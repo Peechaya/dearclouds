@@ -46,7 +46,12 @@
     </div>
     @else
 
-    Lala
+
+
+
+
+<a href="pages/create" class="btn btn-default btn-lg">Pages</a> <a href="projects/create" class="btn btn-default btn-lg">Projects</a>
+
 
     @endif
 </div>

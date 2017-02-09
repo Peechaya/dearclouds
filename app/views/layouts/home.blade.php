@@ -55,9 +55,12 @@
 
     <div class="navbar-right">
     <ul class="nav navbar-nav">
+    <li>{{ HTML::link('projects', 'Portfolio') }}</li>
     @if (Auth::guest())
+
     <li>{{ HTML::link('admin', 'Administration') }}</li>
     @else
+    <li>{{ HTML::link('admin', 'Administration') }}</li>
     <li>{{ HTML::link('logout', 'Se déconnecter') }}</li>
     @endif
     </ul>
@@ -98,9 +101,11 @@
 
     @endif
 
+    </div>
+
     @yield('content')
 
-    </div>
+
 
 
     <!-- Scripts -->

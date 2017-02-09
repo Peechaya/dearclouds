@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomeController@showIndex');
-Route::resource('users', 'UserController');
+Route::get('projects/', 'ProjectController@index');
 
 Route::get('admin', function()
 {
@@ -27,6 +27,7 @@ Route::group(array('before' => 'admin'), function()
 
 	Route::resource('pages', 'PageController');
 	Route::resource('projects', 'ProjectController');
+	Route::resource('users', 'UserController');
 	// Route::resource('admin', 'AdminController');
 
 });

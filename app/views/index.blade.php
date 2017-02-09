@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.home')
 
 @section('title')
 @parent
@@ -49,22 +49,22 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond text-primary sr-icons" data-sr-id="2" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                        <h3>Analyse</h3>
+                        <p class="text-muted">J'analyse le besoin</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-paper-plane text-primary sr-icons" data-sr-id="3" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                        <h3>Solution</h3>
+                        <p class="text-muted">Je propose la solution adéquate</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-newspaper-o text-primary sr-icons" data-sr-id="4" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
+                        <h3>Propositions</h3>
+                        <p class="text-muted">Je vous fais des propositions.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
@@ -83,7 +83,7 @@
 					 <div class="row no-gutter popup-gallery">
 							 <div class="col-lg-4 col-sm-6">
 									 <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-											 <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+											 <img src="../img/Fotolia_72614757_S.jpg" class="img-responsive" alt="">
 											 <div class="portfolio-box-caption">
 													 <div class="portfolio-box-caption-content">
 															 <div class="project-category text-faded">
@@ -98,7 +98,7 @@
 							 </div>
 							 <div class="col-lg-4 col-sm-6">
 									 <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-											 <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+											 <img src="../img/Fotolia_72614757_S.jpg" class="img-responsive" alt="">
 											 <div class="portfolio-box-caption">
 													 <div class="portfolio-box-caption-content">
 															 <div class="project-category text-faded">
@@ -113,7 +113,7 @@
 							 </div>
 							 <div class="col-lg-4 col-sm-6">
 									 <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-											 <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+											 <img src="../img/Fotolia_72614757_S.jpg" class="img-responsive" alt="">
 											 <div class="portfolio-box-caption">
 													 <div class="portfolio-box-caption-content">
 															 <div class="project-category text-faded">
@@ -128,7 +128,7 @@
 							 </div>
 							 <div class="col-lg-4 col-sm-6">
 									 <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-											 <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+											 <img src="../img/Fotolia_72614757_S.jpg" class="img-responsive" alt="">
 											 <div class="portfolio-box-caption">
 													 <div class="portfolio-box-caption-content">
 															 <div class="project-category text-faded">
@@ -143,7 +143,7 @@
 							 </div>
 							 <div class="col-lg-4 col-sm-6">
 									 <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-											 <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+											 <img src="../img/Fotolia_72614757_S.jpg" class="img-responsive" alt="">
 											 <div class="portfolio-box-caption">
 													 <div class="portfolio-box-caption-content">
 															 <div class="project-category text-faded">
@@ -158,7 +158,7 @@
 							 </div>
 							 <div class="col-lg-4 col-sm-6">
 									 <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-											 <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+											 <img src="../img/Fotolia_72614757_S.jpg" class="img-responsive" alt="">
 											 <div class="portfolio-box-caption">
 													 <div class="portfolio-box-caption-content">
 															 <div class="project-category text-faded">

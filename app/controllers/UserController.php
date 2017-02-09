@@ -39,9 +39,6 @@ class UserController extends BaseController {
 			$user = new User;
 			$user->username      = Input::get('username');
 			$user->email      	 = Input::get('email');
-			$user->name 		 = Input::get('name');
-			$user->lastname 	 = Input::get('lastname');
-			$user->birthdate 	 = Input::get('birthdate');
 			$user->password 	 = Hash::make(Input::get('password'));
 			$user->save();
 
@@ -99,8 +96,6 @@ class UserController extends BaseController {
 			$user = User::find(Auth::user()->id);
 			$user->username       = Input::get('username');
 			$user->email      	= Input::get('email');
-			$user->birthdate 	= Input::get('birthdate');
-			$user->name = Input::get('name');
 			$user->save();
 
 			return Redirect::to('profile')->with('success', 'Votre profil a bien été modifié.');
