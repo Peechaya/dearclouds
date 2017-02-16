@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'HomeController@showIndex');
-Route::get('projects/', 'ProjectController@index');
+Route::get('portfolio', 'ProjectController@portfolio');
+Route::get('projects', 'ProjectController@index');
 
 Route::get('admin', function()
 {

@@ -11,6 +11,15 @@ class ProjectController extends BaseController {
 		return View::make('projects.index', compact('projects'));
 	}
 
+	public function portfolio()
+	{
+		$projects = DB::table('projects')
+		->orderBy('created_at', 'desc')
+		->paginate(6);
+
+		return View::make('portfolio', compact('projects'));
+	}
+
 
 	public function create()
 	{
@@ -42,21 +51,21 @@ class ProjectController extends BaseController {
 		{
 
 			$file = Input::file('file');
-			$destinationPath = 'public/projects/';
+			$destinationPath = 'public/files/';
 			$filename = str_random(20);
 			$extension = $file->getClientOriginalExtension();
 			$type = $file->getMimeType();
 			$size = Input::file('file')->getSize();
 			$upload_success = Input::file('file')->move($destinationPath, $filename . '.' . $extension);
-			$url = 'projects/' . $filename . '.' . $extension;
+			$url = 'files/' . $filename . '.' . $extension;
 
 			$project = new Project;
 			$project->title      	= Input::get('title');
-			$project->photo 		= $url;
-			$project->url			= Input::get('url');
-			$project->content		= Input::get('content');
+			$project->photo 			= $url;
+			$project->url					= Input::get('url');
+			$project->content			= Input::get('content');
 			$project->user_id 		= Auth::user()->id;
-			$project->categorie     = Input::get('categorie');
+			$project->categorie   = Input::get('categorie');
 			$project->save();
 
 
@@ -73,13 +82,13 @@ class ProjectController extends BaseController {
 			Upload::create([
 				'name'       	=> $filename,
 				'user_id'    	=> Auth::user()->id,
-				'url'        	=> 'projects/' . $filename . '.' . $extension,
+				'url'        	=> 'files/' . $filename . '.' . $extension,
 				'size'			=> $size,
 				'extension'   	=> $file->getClientOriginalExtension(),
 				'type'			=> $type
 				]);
 
-			return Redirect::to('projects')->with('success', 'Votre project a bien été posté.');
+			return Redirect::to('portfolio')->with('success', 'Votre project a bien été posté.');
 		}
 	}
 

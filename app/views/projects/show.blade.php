@@ -12,7 +12,7 @@
 <div class="container">
     <div class="text-center">
         <h2>{{ $project->title }}</h2>
-        <p><img src="{{ $project->photo }}" class="img-rounded" alt="photo"></p>
+        <p><img src="/{{ $project->photo }}" class="img-rounded" alt="photo"></p>
     </div>
 
     <pre>

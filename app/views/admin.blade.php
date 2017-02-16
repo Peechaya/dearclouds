@@ -53,6 +53,37 @@
 <a href="pages/create" class="btn btn-default btn-lg">Pages</a> <a href="projects/create" class="btn btn-default btn-lg">Projects</a>
 
 
+<h1>Derniers projets</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Miniature</th>
+      <th>Nom</th>
+      <th>Ajouté par</th>
+      <th>Taille</th>
+      <th>Date d'ajout</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @foreach ($projects as $project)
+    <tr>
+      <td width="100px"><img class="miniatures" src="{{ $project->photo }}"></td>
+      <td>{{ $project->title }}</td>
+      <td>{{ $project->user_id }}</td>
+      <td>{{ $project->size }}</td>
+      <td>{{ $project->created_at }}</td>
+    </tr>
+    @endforeach
+
+  </tbody>
+
+</table>
+
+
+
+
     @endif
 </div>
 

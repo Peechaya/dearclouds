@@ -30,7 +30,7 @@
 
     <body>
 
-    <div style="margin: 0 auto; width: 80px; border-radius: 100px; margin-top: -50px; z-index: 3; position: relative;"><img src="../img/Chibbs.png" alt="profile" width="80" style="border-radius: 100px; z-index: 3; border: 3px solid black;"></div>
+    <div style="margin: 0 auto; width: 80px; border-radius: 100px; margin-top: -50px; z-index: 3; position: relative;"><img src="../img/profile.png" alt="profile" width="80" style="border-radius: 100px; z-index: 3; border: 3px solid black;"></div>
 
     <!-- Navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="z-index: 1;">
@@ -55,7 +55,7 @@
 
     <div class="navbar-right">
     <ul class="nav navbar-nav">
-    <li>{{ HTML::link('projects', 'Portfolio') }}</li>
+    <li>{{ HTML::link('portfolio', 'Portfolio') }}</li>
     @if (Auth::guest())
 
     <li>{{ HTML::link('admin', 'Administration') }}</li>

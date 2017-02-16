@@ -25,9 +25,19 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Last project</h2>
-                    <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">View all projects</a>
+
+										@foreach ($projects as $project)
+
+										   <a href="projects/{{ $project->id }}"><img class="img-thumbnail" src="{{ $project->photo }}"></a>
+										      <h3>{{ $project->title }}</h3>
+										      <p>{{ $project->content }}</p>
+
+										      <p><a class="btn btn-default" href="projects/{{ $project->id }}" role="button">Read More</a></p>
+										<br><br><br>     
+
+
+
+										      @endforeach
                 </div>
             </div>
         </div>

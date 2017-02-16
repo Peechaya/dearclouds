@@ -30,10 +30,6 @@
 	{{Form::text('title', null,array('class' => 'form-control'))}}
 </div>
 
-<!-- <div class="form-group">
-	{{Form::label('photo','Photo')}}
-	{{ Form::file('file','',array('id'=>'')) }}
-</div> -->
 
 <div class="form-group">
 	{{Form::label('photo','Image')}}

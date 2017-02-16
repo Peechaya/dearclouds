@@ -17,12 +17,20 @@ class HomeController extends BaseController {
 
 	public function showIndex()
 	{
-		return View::make('index');
+		$projects = DB::table('projects')
+		->orderBy('created_at', 'desc')
+		->paginate(1);
+
+			return View::make('index', compact('projects'));
 	}
 
 	public function showAdmin()
 	{
-		return View::make('admin');
+		$projects = DB::table('projects')
+		->orderBy('created_at', 'desc')
+		->paginate(1);
+
+			return View::make('admin', compact('projects'));
 	}
 
 }
