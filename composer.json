@@ -6,7 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"doctrine/dbal": "^2.5"
+		"doctrine/dbal": "^2.5",
+		"ckeditor/ckeditor": "^4.6"
 	},
 	"autoload": {
 		"classmap": [

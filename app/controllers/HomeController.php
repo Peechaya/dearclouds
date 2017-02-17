@@ -26,11 +26,8 @@ class HomeController extends BaseController {
 
 	public function showAdmin()
 	{
-		$projects = DB::table('projects')
-		->orderBy('created_at', 'desc')
-		->paginate(1);
-
-			return View::make('admin', compact('projects'));
+		$projects = Project::all();
+		return View::make('admin', compact('projects'));
 	}
 
 }

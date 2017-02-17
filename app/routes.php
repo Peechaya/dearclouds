@@ -20,6 +20,8 @@ Route::get('admin', function()
 	return View::make('admin');
 });
 Route::post('admin', 'UserController@postLogin');
+Route::get('admin', 'HomeController@showAdmin');
+
 Route::get('logout', 'UserController@getLogout');
 
 // Filtre Admin

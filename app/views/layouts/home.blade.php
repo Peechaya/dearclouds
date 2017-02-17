@@ -8,69 +8,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-    {{ HTML::style('css/creative.css') }}
-    {{ HTML::style('css/bootstrap.css') }}
-    {{ HTML::style('css/font-awesome.css') }}
+    <!-- Plugin CSS -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
 
-    {{ HTML::script('js/creative.js') }}
-    {{ HTML::script('js/bootstrap.js') }}
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
 
-    <style>
-    @section('styles')
-    body {
-        padding-top: 60px;
-    }
-    @show
-    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     </head>
 
-    <body>
-
-    <div style="margin: 0 auto; width: 80px; border-radius: 100px; margin-top: -50px; z-index: 3; position: relative;"><img src="../img/profile.png" alt="profile" width="80" style="border-radius: 100px; z-index: 3; border: 3px solid black;"></div>
-
-    <!-- Navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="z-index: 1;">
-    <div class="container">
-    <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    </button>
-
-    <a href="{{{ URL::to('') }}}" class="navbar-brand">Portfolio</a>
-    </div>
-
-    <div class="collapse navbar-collapse">
-    <ul class="nav navbar-nav">
-
-    <li></li>
-    </ul>
-
-
-    <div class="navbar-right">
-    <ul class="nav navbar-nav">
-    <li>{{ HTML::link('portfolio', 'Portfolio') }}</li>
-    @if (Auth::guest())
-
-    <li>{{ HTML::link('admin', 'Administration') }}</li>
-    @else
-    <li>{{ HTML::link('admin', 'Administration') }}</li>
-    <li>{{ HTML::link('logout', 'Se déconnecter') }}</li>
-    @endif
-    </ul>
-    </div>
+    <body id="page-top">
 
 
 
-    </div>
-    </div>
-    </div>
+<!-- Navbar -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Portfolio</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                <li>{{ HTML::link('portfolio', 'Portfolio') }}</li>
+                <li>{{ HTML::link('cv', 'CV') }}</li>
+                <li>{{ HTML::link('contact', 'Contact') }}</li>
+                @if (Auth::guest())
+
+                <<li><a href="/admin"><i class="fa fa-lock sr-icons"></i></a></li>
+
+                @else
+
+                <li><a href="/admin"><i class="fa fa-lock sr-icons"></i></a></li>
+                <li><a href="/logout"><i class="fa fa-sign-out sr-icons"></i></a></li>
+
+                @endif
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+              <img src="../img/profile.png" alt="profile" width="100" style="border-radius: 100px; border: 5px solid white;">
+              <hr>
+                <h1 id="homeHeading">Hi! I'm Manorie.</h1>
+
+                <p color="white">I'm a Web Developer currently working at Cloudwatt, Paris<br />
+                <small><i>Yup, Mass Effect.</i></small></p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
 
 
   <div class="container">
@@ -108,9 +119,19 @@
 
 
 
-    <!-- Scripts -->
-    {{ HTML::script('js/bootstrap.js') }}
-    {{ HTML::script('js/bootstrap.min.js') }}
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
 
 
 
