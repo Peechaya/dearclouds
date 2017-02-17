@@ -30,4 +30,10 @@ class HomeController extends BaseController {
 		return View::make('admin', compact('projects'));
 	}
 
+	public function showCv()
+	{
+		$projects = Project::all();
+		return View::make('cv', compact('projects'));
+	}
+
 }
