@@ -13,26 +13,32 @@
 <div class="alert alert-info">{{ Session::get('message') }}</div>
 @endif
 
-<center>
-   <div class="row">
-@foreach ($projects as $project)
-<div class="col-lg-4">
-   <a href="projects/{{ $project->id }}"><img class="img-thumbnail" src="{{ $project->photo }}"></a>
-      <h3>{{ $project->title }}</h3>
-      <p>{{ $project->content }}</p>
 
-      <p><a class="btn btn-default" href="projects/{{ $project->id }}" role="button">Read More</a></p>
-<br><br><br>      </div>
+ <div class="competence sr-button">PHP</div>
 
+ <div class="competence sr-button">Laravel</div>
 
+ <div class="competence sr-button">CSS/HTML</div>
 
-      @endforeach
-</div>
+ <div class="competence sr-button">JavaScript</div>
 
+ <div class="competence sr-button">Photoshop</div>
 
+ <div class="competence sr-button">Jekyll</div>
 
+ <div class="competence sr-button">Webdesign</div>
 
-</center>
+ <div class="competence sr-button">MySQL</div>
+
+ <div class="competence sr-button">SEO</div>
+
+ <div class="competence sr-button">Git</div>
+
+ <div class="competence sr-button">Shell</div>
+
+ <div class="competence sr-button">Linux</div>
+
+ <div class="competence sr-button">Wordpress</div>
 
 
 @stop
