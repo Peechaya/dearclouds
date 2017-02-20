@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">How i work</h2>
+                    <h2 class="section-heading">What i do</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -44,23 +44,23 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Analyse</h3>
-                        <p class="text-muted">J'analyse le besoin</p>
+                        <i class="fa fa-4x fa-code text-primary sr-icons"></i>
+                        <h3>Web Development</h3>
+                        <p class="text-muted">I do apps web from scratch</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Solution</h3>
-                        <p class="text-muted">Je propose la solution adéquate</p>
+                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                        <h3>Design</h3>
+                        <p class="text-muted">I'm making my code sexy</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Propositions</h3>
-                        <p class="text-muted">Je vous fais des propositions.</p>
+                        <h3>SEO</h3>
+                        <p class="text-muted">Your app won't fall in google abysses</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
