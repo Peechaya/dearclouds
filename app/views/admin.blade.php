@@ -48,6 +48,8 @@
 
 
 
+<div class="container">
+
 
 
 <a href="pages/create" class="btn btn-default btn-lg">Pages</a> <a href="projects/create" class="btn btn-default btn-lg">Projects</a>
@@ -59,21 +61,32 @@
   <thead>
     <tr>
       <th>Miniature</th>
-      <th>Nom</th>
-      <th>Ajouté par</th>
-      <th>Taille</th>
+      <th>Titre</th>
       <th>Date d'ajout</th>
+      <th>Options</th>
     </tr>
   </thead>
 
   <tbody>
     @foreach ($projects as $project)
     <tr>
-      <td width="100px"><img class="miniatures" src="{{ $project->photo }}"></td>
+      <td><img src="{{ $project->photo }}" class="miniatures" style="width:250px;"></td>
       <td>{{ $project->title }}</td>
-      <td>{{ $project->user_id }}</td>
-      <td>{{ $project->size }}</td>
+
+
       <td>{{ $project->created_at }}</td>
+      <td>
+
+        {{ Form::open(array('url' => 'projects/' . $project->id, 'class' => 'pull-right')) }}
+        {{ Form::hidden('_method', 'DELETE') }}
+        {{ Form::submit('Supprimer', array('class' => 'btn btn-danger')) }}
+        {{ Form::close() }}
+
+        <a class="btn btn-small btn-success" href="{{ URL::to('projects/' . $project->id) }}" target="_blank">Voir</a>
+
+        <a class="btn btn-small btn-warning" href="{{ URL::to('projects/' . $project->id . '/edit') }}">Editer</a>
+
+      </td>
     </tr>
     @endforeach
 
@@ -85,6 +98,7 @@
 
 
     @endif
+</div>
 </div>
 
 {{ Form::close() }}

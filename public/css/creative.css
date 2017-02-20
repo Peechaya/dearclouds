@@ -105,6 +105,16 @@ aside {
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
+
+.navbar-style2 .nav > li.active > a,
+.navbar-style2 .nav > li.active > a:focus {
+  color: #F05F40 !important;
+  background-color: white !important;
+}
+.navbar-style2 .nav > li.active > a:hover,
+.navbar-style2 .nav > li.active > a:focus:hover {
+  background-color: white !important;
+}
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;

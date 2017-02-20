@@ -19,7 +19,7 @@ class HomeController extends BaseController {
 	{
 		$projects = DB::table('projects')
 		->orderBy('created_at', 'desc')
-		->paginate(1);
+		->paginate(6);
 
 			return View::make('index', compact('projects'));
 	}

@@ -17,7 +17,7 @@
 
     <p class="bg-danger">{{ HTML::ul($errors->all()) }}</p>
 
-    {{ Form::model($project, array('route' => array('project.update', $page->id), 'method' => 'PUT')) }}
+    {{ Form::model($project, array('route' => array('projects.update', $project->id), 'method' => 'PUT')) }}
 
     <div class="form-group">
     {{Form::label('categorie','Catégorie')}}
@@ -33,9 +33,14 @@
     {{Form::text('title', null,array('class' => 'form-control'))}}
 </div>
 
-<div class="form-group">
-    {{Form::label('photo','Photo')}}
+<!-- <div class="form-group">
+    {{Form::label('photo','Image')}}
     {{Form::text('photo', null,array('class' => 'form-control'))}}
+</div> -->
+
+<div class="form-group">
+	{{Form::label('photo','Image')}}
+	{{ Form::file('file','',array('id'=>'')) }}
 </div>
 
 <div class="form-group">
@@ -52,7 +57,7 @@
 
     {{ Form::close() }}
 
-    
+
     @endif
 
 

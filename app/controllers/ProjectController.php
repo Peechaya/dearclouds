@@ -88,7 +88,8 @@ class ProjectController extends BaseController {
 				'type'			=> $type
 				]);
 
-			return Redirect::to('portfolio')->with('success', 'Votre project a bien été posté.');
+
+			return Redirect::to('portfolio')->with('success', 'Votre projet a bien été posté.');
 		}
 	}
 
@@ -113,7 +114,7 @@ class ProjectController extends BaseController {
 		}
 		else
 		{
-			return Redirect::to('')->with('error', 'Vous ne pouvez pas faire ça.');
+			return Redirect::to('admin')->with('error', 'Vous ne pouvez pas faire ça.');
 		}
 	}
 
@@ -144,7 +145,7 @@ class ProjectController extends BaseController {
 
 
 
-			return Redirect::to('')->with('success', 'Votre projet a bien été mis à jour.');
+			return Redirect::to('admin')->with('success', 'Votre projet a bien été mis à jour.');
 		}
 	}
 
@@ -158,7 +159,7 @@ class ProjectController extends BaseController {
 		File::delete(public_path() . '/' . $path);
 		$project->delete();
 
-		return Redirect::to('')->with('success', 'Fichier supprimé.');
+		return Redirect::to('admin')->with('success', 'Projet supprimé.');
 	}
 
 

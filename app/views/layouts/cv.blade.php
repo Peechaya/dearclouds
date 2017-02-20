@@ -29,6 +29,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
     </head>
 
     <body id="page-top">
@@ -58,8 +61,8 @@
 
                 @else
 
-                <li><a href="/admin"><i class="fa fa-lock"></i></a></li>
-                <li><a href="/logout"><i class="fa fa-sign-out"></i></a></li>
+                <li><a href="/admin"><i class="fa fa-lock sr-icons"></i></a></li>
+                <li><a href="/logout"><i class="fa fa-sign-out sr-icons"></i></a></li>
 
                 @endif
                 </ul>

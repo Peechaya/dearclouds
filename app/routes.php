@@ -14,7 +14,6 @@
 Route::get('/', 'HomeController@showIndex');
 Route::get('cv', 'HomeController@showCv');
 Route::get('portfolio', 'ProjectController@portfolio');
-Route::get('projects', 'ProjectController@index');
 
 Route::get('admin', function()
 {
@@ -25,6 +24,8 @@ Route::get('admin', 'HomeController@showAdmin');
 
 Route::get('logout', 'UserController@getLogout');
 
+
+
 // Filtre Admin
 Route::group(array('before' => 'admin'), function()
 {
@@ -34,4 +35,25 @@ Route::group(array('before' => 'admin'), function()
 	Route::resource('users', 'UserController');
 	// Route::resource('admin', 'AdminController');
 
+});
+
+Route::get('jcrop', function()
+{
+    return View::make('jcrop')->with('file', 'files/'. Session::get('file'));
+});
+Route::post('jcrop', function()
+{
+    $quality = 90;
+
+    $src  = Input::get('file');
+    $img  = imagecreatefromjpeg($src);
+    $dest = ImageCreateTrueColor(Input::get('w'),
+        Input::get('h'));
+
+    imagecopyresampled($dest, $img, 0, 0, Input::get('x'),
+        Input::get('y'), Input::get('w'), Input::get('h'),
+        Input::get('w'), Input::get('h'));
+    imagejpeg($dest, $src, $quality);
+
+    return "<img src='" . $src . "'>";
 });
