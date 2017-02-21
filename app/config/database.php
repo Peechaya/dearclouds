@@ -51,13 +51,13 @@ return array(
 			'database' => __DIR__.'/../database/production.sqlite',
 			'prefix'   => '',
 		),
-
+		
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'portfolio',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'us-cdbr-iron-east-04.cleardb.net',
+			'database'  => 'heroku_8af2a1995ef494d',
+			'username'  => 'b2494d0f0d1f75',
+			'password'  => '0d71b7e7',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
