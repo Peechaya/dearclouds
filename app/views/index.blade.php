@@ -89,7 +89,7 @@
 
 
 							 <div class="col-lg-4 col-sm-6 sr-button">
-									 <a href="projects/{{ $project->id }}" class="portfolio-box">
+									 <a href="project/{{ $project->id }}" class="portfolio-box">
 											 <img src="{{ $project->photo }}" class="img-responsive" alt="" style="height:250px; width:100%;">
 											 <div class="portfolio-box-caption">
 													 <div class="portfolio-box-caption-content">
@@ -119,9 +119,9 @@
 		        <div class="container">
 		            <div class="row">
 		                <div class="col-lg-8 col-lg-offset-2 text-center">
-		                    <h2 class="section-heading">Skills</h2>
+		                    <h2 class="section-heading">Blabla</h2>
 
-												PHP, MySQL, CSS3, HTML5, Shell, Laravel, Wordpress, Photoshop, JavaScript, JQuery, CakePHP, Dreamweaver, Bootstrap
+												Blablabla
 		                </div>
 		            </div>
 		        </div>

@@ -14,6 +14,7 @@
 Route::get('/', 'HomeController@showIndex');
 Route::get('cv', 'HomeController@showCv');
 Route::get('portfolio', 'ProjectController@portfolio');
+Route::get('project/{id}', 'HomeController@showProject');
 
 Route::get('admin', function()
 {

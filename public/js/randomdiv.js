@@ -31,7 +31,7 @@ function moveRandom(obj) {
   obj.animate({
     top: newY,
     left: newX
-  }, 10000, function() {
+  }, 20000, function() {
       moveRandom(obj);
   });
 }

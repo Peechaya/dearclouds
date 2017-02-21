@@ -160,7 +160,7 @@ class UserController extends BaseController {
     public function getLogout()
     {
         Auth::logout();
-        return Redirect::to('admin')->with('info', 'Vous venez de vous déconnecter.');
+        return Redirect::to('')->with('info', 'Vous venez de vous déconnecter.');
     }
 
 

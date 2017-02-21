@@ -36,4 +36,11 @@ class HomeController extends BaseController {
 		return View::make('cv', compact('projects'));
 	}
 
+	public function showProject($id)
+	{
+		$project = Project::find($id);
+
+		return View::make('projects.show', compact('project'));
+	}
+
 }

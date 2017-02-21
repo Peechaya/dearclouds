@@ -54,7 +54,7 @@
                 <li>{{ HTML::link('contact', 'Contact') }}</li>
                 @if (Auth::guest())
 
-                <<li><a href="/admin"><i class="fa fa-lock sr-icons"></i></a></li>
+                <li><a href="/admin"><i class="fa fa-lock sr-icons"></i></a></li>
 
                 @else
 
