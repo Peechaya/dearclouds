@@ -59,6 +59,8 @@ background: url(http://jackrugile.com/images/misc/skyline-texture.png);
   width: 100px;
   height: 100px;
   text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
   border-radius: 100px;
   min-width: 50px;
   min-height: 50px;

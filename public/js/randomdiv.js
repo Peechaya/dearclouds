@@ -17,7 +17,7 @@ function moveRandom(obj) {
   var bWidth = obj.width();
 
   // set maximum position
-  maxY = cPos.top + cHeight - bHeight - pad;
+  maxY = cPos.top + cHeight - bHeight * 3;
   maxX = cPos.left + cWidth - bWidth - pad;
 
   // set minimum position
