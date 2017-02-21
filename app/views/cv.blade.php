@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('layouts.cv')
 
 @section('title')
 @parent
@@ -13,32 +13,34 @@
 <div class="alert alert-info">{{ Session::get('message') }}</div>
 @endif
 
-
- <div class="competence sr-button">PHP</div>
-
- <div class="competence sr-button">Laravel</div>
-
- <div class="competence sr-button">CSS/HTML</div>
-
- <div class="competence sr-button">JavaScript</div>
-
- <div class="competence sr-button">Photoshop</div>
-
- <div class="competence sr-button">Jekyll</div>
-
- <div class="competence sr-button">Webdesign</div>
-
- <div class="competence sr-button">MySQL</div>
-
- <div class="competence sr-button">SEO</div>
-
- <div class="competence sr-button">Git</div>
-
- <div class="competence sr-button">Shell</div>
-
- <div class="competence sr-button">Linux</div>
-
- <div class="competence sr-button">Wordpress</div>
+<div id="canvas">
 
 
+ <div class="competence">PHP</div>
+
+ <div class="competence">Laravel</div>
+
+ <div class="competence">CSS/HTML</div>
+
+ <div class="competence">JavaScript</div>
+
+ <div class="competence">Photoshop</div>
+
+ <div class="competence">Jekyll</div>
+
+ <div class="competence">Webdesign</div>
+
+ <div class="competence">MySQL</div>
+
+ <div class="competence">SEO</div>
+
+ <div class="competence">Git</div>
+
+ <div class="competence">Shell</div>
+
+ <div class="competence">Linux</div>
+
+ <div class="competence">Wordpress</div>
+
+</div>
 @stop

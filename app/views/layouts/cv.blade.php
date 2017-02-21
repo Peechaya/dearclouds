@@ -9,18 +9,18 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="/css/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="/css/creative.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,6 +31,44 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
+
+    <style>
+    /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+    canvas {
+background:
+  linear-gradient(
+    hsl(200, 50%, 80%) 0%,
+    hsl(200, 30%, 95%) 75%)
+;
+display: block;
+}
+
+#canvas {
+  display: block;
+height: 100%;
+left: 0;
+position: fixed;
+top: 0;
+width: 100%;
+background: url(http://jackrugile.com/images/misc/skyline-texture.png);
+}
+
+.competence {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 100px;
+  min-width: 50px;
+  min-height: 50px;
+  background: #fff;
+  opacity: 0.8;
+  position: absolute;
+}
+  </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
     </head>
 
@@ -72,7 +110,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
+    <!-- <header>
         <div class="header-content">
             <div class="header-content-inner">
               <img src="../img/profile.png" alt="profile" width="100" style="border-radius: 100px; border: 5px solid white;">
@@ -84,7 +122,7 @@
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
-    </header>
+    </header> -->
 
 
   <div class="container">
@@ -123,18 +161,24 @@
 
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/scrollreveal.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/scrollreveal.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
+    <script src="/js/creative.min.js"></script>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js'></script>
+
+      <script src="/js/canvasparallax.js"></script>
+<script src="/js/randomdiv.js"></script>
 
 
 

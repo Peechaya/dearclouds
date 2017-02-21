@@ -121,6 +121,17 @@ class ProjectController extends BaseController {
 
 	public function update($id)
 	{
+
+		$file = Input::file('file');
+		$destinationPath = 'public/files/';
+		$filename = str_random(20);
+		$extension = $file->getClientOriginalExtension();
+		$type = $file->getMimeType();
+		$size = Input::file('file')->getSize();
+		$upload_success = Input::file('file')->move($destinationPath, $filename . '.' . $extension);
+		$url = 'files/' . $filename . '.' . $extension;
+
+
 		$rules = array(
 			'title'       => 'required',
 			'content'      => ''
@@ -137,11 +148,20 @@ class ProjectController extends BaseController {
 		{
 			$project = Project::find($id);
 			$project->title       	= Input::get('title');
-			$project->photo       	= Input::get('photo');
+			$project->photo       	= $url;
 			$project->url       	= Input::get('url');
 			$project->content      	= Input::get('content');
 			$project->categorie     = Input::get('categorie');
 			$project->save();
+
+			Upload::create([
+				'name'       	=> $filename,
+				'user_id'    	=> Auth::user()->id,
+				'url'        	=> 'files/' . $filename . '.' . $extension,
+				'size'			=> $size,
+				'extension'   	=> $file->getClientOriginalExtension(),
+				'type'			=> $type
+				]);
 
 
 

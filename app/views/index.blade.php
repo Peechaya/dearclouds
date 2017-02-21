@@ -46,7 +46,7 @@
                     <div class="service-box">
                         <i class="fa fa-4x fa-code text-primary sr-icons"></i>
                         <h3>Web Development</h3>
-                        <p class="text-muted">I do apps web from scratch</p>
+                        <p class="text-muted">I do web apps from scratch</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
