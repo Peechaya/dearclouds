@@ -6,7 +6,7 @@
 @stop
 
 @section('content')
-<div class="page-header">
+
 
     @if ( Auth::guest() )
     <h2>Tu n'as rien à faire là :)</h2>
@@ -62,7 +62,7 @@
 
 
 
-</div>
+
 
 
 
