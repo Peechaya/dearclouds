@@ -40,7 +40,7 @@ class HomeController extends BaseController {
 		->orderBy('created_at', 'desc')
 		->paginate(6);
 
-			return View::make('transkations', compact('projects'));
+			return View::make('translations', compact('projects'));
 	}
 
 	public function showFoster()

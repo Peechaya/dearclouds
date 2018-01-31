@@ -10,8 +10,8 @@
 
     <!-- Materialize Core CSS -->
     <link href="/css/materialize.css" rel="stylesheet">
-    <!-- <link href="css/print.css" rel="stylesheet">
-    <link href="css/screen.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <!-- <link href="css/screen.css" rel="stylesheet">
     <link href="css/ie.css" rel="stylesheet"> -->
 
     <!-- Custom Fonts -->
@@ -45,6 +45,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/scrollreveal.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/animation.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>

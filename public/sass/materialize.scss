@@ -9,6 +9,8 @@
 // Reset
 @import "components/normalize";
 
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Josefin+Sans|Montserrat|Nova+Mono');
+
 // components
 @import "components/global";
 @import "components/badges";
@@ -65,22 +67,35 @@
 #webdeveloper:hover, #translator:hover, #foster:hover, #madclouds:hover {
   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
+
+  h2, p {
+    -webkit-filter: grayscale(0%) blur(0px) !important; /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%) blur(0px) !important;
+  }
+
 }
 
 #webdeveloper {
-  @extend .indigo;
+
   position: absolute;
   height: 50% !important;
   width: 50% !important;
   background-image: url('../img/header.jpg');
   background-size: cover;
+  background-position: center;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
   z-index: 1;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+
+    h2 {
+      font-family: "Nova Mono";
+    }
 }
 
 #translator {
-  @extend .pink, .darken-2;
+
   position: absolute;
   height: 50% !important;
   width: 50% !important;
@@ -88,12 +103,18 @@
   z-index: 1;
   background-image: url('../img/translations.jpg');
   background-size: cover;
+  background-position: center;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+  transition: .5s ease;
+
+    h2 {
+      font-family: 'Abril Fatface', cursive;
+    }
 }
 
 #foster {
-  @extend .brown, .lighten-2;
+
   position: absolute;
   height: 50% !important;
   width: 50% !important;
@@ -101,12 +122,18 @@
   z-index: 1;
   background-image: url('../img/foster.JPG');
   background-size: cover;
+  background-position: center;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+  transition: .5s ease;
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+    }
 }
 
 #madclouds {
-  @extend .teal, .lighten-2;
+
   position: absolute;
   height: 50% !important;
   width: 50% !important;
@@ -115,8 +142,14 @@
   z-index: 1;
   background-image: url('https://static.tumblr.com/fd4f9c57ad39c51dac01f6739a0757b2/z22p5iv/58yow335e/tumblr_static_5jdt19geapogocg0ko8k0448g.png');
   background-size: cover;
+  background-position: center;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+  transition: .5s ease;
+
+    h2 {
+      font-family: 'Josefin Sans', sans-serif;
+    }
 }
 
 #about {
@@ -124,9 +157,15 @@
   position: absolute;
    top: 50%;
    left: 50%;
-   width: 150px;
-   height: 150px;
-   margin-top: -75px; /* Half the height */
-   margin-left: -75px; /* Half the width */
+   width: 200px;
+   height: 230px;
+   margin-left: -100px; /* Half the width */
+   margin-top: -115px; /* Half the height */
+   -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
 
+#about:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
