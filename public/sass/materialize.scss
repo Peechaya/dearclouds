@@ -9,7 +9,7 @@
 // Reset
 @import "components/normalize";
 
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Josefin+Sans|Montserrat|Nova+Mono');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Exo+2|Josefin+Sans|Montserrat|Nova+Mono');
 
 // components
 @import "components/global";
@@ -72,7 +72,7 @@
     top: 36%;
     text-align: center;
     color: white;
-    text-shadow: 0px 0px 10px black;
+    text-shadow: 0px 0px 5px black;
   }
 
   p {
@@ -80,15 +80,16 @@
     margin-top: -15px;
     text-transform: uppercase;
     font-size: 85%;
+    font-family: 'Exo 2', sans-serif;
+    visibility: hidden;
   }
 }
 
 
 #webdeveloper:hover, #translator:hover, #foster:hover, #madclouds:hover {
 
-  h2, p {
-    -webkit-filter: grayscale(0%) blur(0px) !important; /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%) blur(0px) !important;
+  p {
+    visibility: visible;
   }
 
   .background-image {

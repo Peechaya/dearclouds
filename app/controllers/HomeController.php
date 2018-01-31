@@ -34,22 +34,22 @@ class HomeController extends BaseController {
 			return View::make('webprojects', compact('projects'));
 	}
 
-	public function showTranslations()
+	public function showSubtitles()
 	{
-		$projects = DB::table('translations')
+		$subtitles = DB::table('subtitles')
 		->orderBy('created_at', 'desc')
 		->paginate(6);
 
-			return View::make('translations', compact('projects'));
+		return View::make('translations', compact('subtitles'));
 	}
 
-	public function showFoster()
+	public function showCats()
 	{
-		$projects = DB::table('fosters')
+		$cats = DB::table('cats')
 		->orderBy('created_at', 'desc')
 		->paginate(6);
 
-			return View::make('fosterfamily', compact('projects'));
+			return View::make('fosterfamily', compact('cats'));
 	}
 
 	public function showAdmin()

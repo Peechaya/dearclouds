@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Josefin+Sans|Montserrat|Nova+Mono");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Exo+2|Josefin+Sans|Montserrat|Nova+Mono");
 /* line 370, ../sass/components/_color.scss */
 .materialize-red {
   background-color: #e51c23 !important;
@@ -10142,7 +10142,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   top: 36%;
   text-align: center;
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 5px black;
 }
 /* line 78, ../sass/materialize.scss */
 #webdeveloper p, #translator p, #foster p, #madclouds p {
@@ -10150,15 +10150,20 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin-top: -15px;
   text-transform: uppercase;
   font-size: 85%;
+  font-family: 'Exo 2', sans-serif;
+  visibility: hidden;
 }
 
-/* line 89, ../sass/materialize.scss */
-#webdeveloper:hover h2, #webdeveloper:hover p, #translator:hover h2, #translator:hover p, #foster:hover h2, #foster:hover p, #madclouds:hover h2, #madclouds:hover p {
-  -webkit-filter: grayscale(0%) blur(0px) !important;
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%) blur(0px) !important;
+/* line 91, ../sass/materialize.scss */
+#webdeveloper:hover p, #translator:hover p, #foster:hover p, #madclouds:hover p {
+  visibility: visible;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
 }
-/* line 94, ../sass/materialize.scss */
+/* line 100, ../sass/materialize.scss */
 #webdeveloper:hover .background-image, #translator:hover .background-image, #foster:hover .background-image, #madclouds:hover .background-image {
   -webkit-filter: grayscale(0%);
   /* Safari 6.0 - 9.0 */
@@ -10175,67 +10180,67 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /* IE6 and 7 */
 }
 
-/* line 108, ../sass/materialize.scss */
+/* line 114, ../sass/materialize.scss */
 #webdeveloper {
   height: 50% !important;
   width: 50% !important;
 }
-/* line 113, ../sass/materialize.scss */
+/* line 119, ../sass/materialize.scss */
 #webdeveloper .background-image {
   background-image: url("../img/header.jpg");
 }
-/* line 117, ../sass/materialize.scss */
+/* line 123, ../sass/materialize.scss */
 #webdeveloper h2 {
   font-family: "Nova Mono";
 }
 
-/* line 122, ../sass/materialize.scss */
+/* line 128, ../sass/materialize.scss */
 #translator {
   height: 50% !important;
   width: 50% !important;
   margin-left: 50%;
 }
-/* line 128, ../sass/materialize.scss */
+/* line 134, ../sass/materialize.scss */
 #translator .background-image {
   background-image: url("../img/translations.jpg");
 }
-/* line 132, ../sass/materialize.scss */
+/* line 138, ../sass/materialize.scss */
 #translator h2 {
   font-family: 'Abril Fatface', cursive;
 }
 
-/* line 137, ../sass/materialize.scss */
+/* line 143, ../sass/materialize.scss */
 #foster {
   height: 50% !important;
   width: 50% !important;
   top: 50%;
 }
-/* line 143, ../sass/materialize.scss */
+/* line 149, ../sass/materialize.scss */
 #foster .background-image {
   background-image: url("../img/foster.JPG");
 }
-/* line 147, ../sass/materialize.scss */
+/* line 153, ../sass/materialize.scss */
 #foster h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* line 152, ../sass/materialize.scss */
+/* line 158, ../sass/materialize.scss */
 #madclouds {
   height: 50% !important;
   width: 50% !important;
   top: 50%;
   left: 50%;
 }
-/* line 159, ../sass/materialize.scss */
+/* line 165, ../sass/materialize.scss */
 #madclouds .background-image {
   background-image: url("https://static.tumblr.com/fd4f9c57ad39c51dac01f6739a0757b2/z22p5iv/58yow335e/tumblr_static_5jdt19geapogocg0ko8k0448g.png");
 }
-/* line 163, ../sass/materialize.scss */
+/* line 169, ../sass/materialize.scss */
 #madclouds h2 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-/* line 168, ../sass/materialize.scss */
+/* line 174, ../sass/materialize.scss */
 #about {
   z-index: 3;
   position: absolute;
@@ -10251,7 +10256,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   transition: transform .8s ease-in-out;
 }
 
-/* line 181, ../sass/materialize.scss */
+/* line 187, ../sass/materialize.scss */
 #about:hover {
   z-index: 4;
   -webkit-transform: rotate(360deg);

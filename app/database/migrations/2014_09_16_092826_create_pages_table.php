@@ -16,9 +16,10 @@ class CreatePagesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('user_id');
-			$table->string('title', 64);
+			$table->string('title', 255);
 			$table->longText('content');
 			$table->string('photo', 255);
+			$table->string('tags', 255);
 			$table->timestamps();
 			$table->softDeletes();
 		});

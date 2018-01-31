@@ -1,21 +1,21 @@
 <?php
 
-class FosterController extends BaseController {
+class SubtitleController extends BaseController {
 
 	public function index()
 	{
-		$fosters = DB::table('fosters')
+		$subtitles = DB::table('subtitles')
 		->orderBy('created_at', 'desc')
 		->paginate(6);
 
-		return View::make('fosters.index', compact('fosters'));
+		return View::make('subtitles.index', compact('subtitles'));
 	}
 
 
 
 	public function create()
 	{
-		return View::make('fosters.create');
+		return View::make('subtitles.create');
 	}
 
 
@@ -35,7 +35,7 @@ class FosterController extends BaseController {
 
 		if ($validator->fails())
 		{
-			return Redirect::to('fosters/create')
+			return Redirect::to('subtitles/create')
 			->withErrors($validator)
 			->withInput(Input::except('password'));
 		}
@@ -51,25 +51,25 @@ class FosterController extends BaseController {
 			$upload_success = Input::file('file')->move($destinationPath, $filename . '.' . $extension);
 			$url = 'files/' . $filename . '.' . $extension;
 
-			$foster = new Foster;
-			$foster->title      	= Input::get('title');
-			$foster->photo 			= $url;
-			$foster->url					= Input::get('url');
-			$foster->content			= Input::get('content');
-			$foster->user_id 		= Auth::user()->id;
-			$foster->categorie   = Input::get('categorie');
-			$foster->save();
+			$subtitle = new Subtitle;
+			$subtitle->title      	= Input::get('title');
+			$subtitle->photo 			= $url;
+			$subtitle->url					= Input::get('url');
+			$subtitle->content			= Input::get('content');
+			$subtitle->user_id 		= Auth::user()->id;
+			$subtitle->categorie   = Input::get('categorie');
+			$subtitle->save();
 
 
 
-			// $foster = new Foster;
-			// $foster->title      	= Input::get('title');
-			// $foster->photo 		= $url;
-			// $foster->url			= Input::get('url');
-			// $foster->content		= Input::get('content');
-			// $foster->user_id 		= Auth::user()->id;
-			// $foster->categorie     = Input::get('categorie');
-			// $foster->save();
+			// $subtitle = new Subtitle;
+			// $subtitle->title      	= Input::get('title');
+			// $subtitle->photo 		= $url;
+			// $subtitle->url			= Input::get('url');
+			// $subtitle->content		= Input::get('content');
+			// $subtitle->user_id 		= Auth::user()->id;
+			// $subtitle->categorie     = Input::get('categorie');
+			// $subtitle->save();
 
 			Upload::create([
 				'name'       	=> $filename,
@@ -88,21 +88,21 @@ class FosterController extends BaseController {
 
 	public function show($id)
 	{
-		$foster = Foster::find($id);
+		$subtitle = Subtitle::find($id);
 
-		return View::make('fosters.show', compact('foster'));
+		return View::make('subtitles.show', compact('subtitle'));
 	}
 
 
 	public function edit($id)
 	{
 
-		$foster = Foster::find($id);
+		$subtitle = Subtitle::find($id);
 
-		if ($foster)
+		if ($subtitle)
 		{
-			return View::make('fosters.edit')
-			->with('foster', $foster);
+			return View::make('subtitles.edit')
+			->with('subtitle', $subtitle);
 		}
 		else
 		{
@@ -135,21 +135,21 @@ class FosterController extends BaseController {
 
 
 		if ($validator->fails()) {
-			return Redirect::to('foster/' . $id . '/edit')
+			return Redirect::to('subtitle/' . $id . '/edit')
 			->withErrors($validator)
 			->withInput(Input::except('password'));
 		}
 		else
 		{
-			$foster = Foster::find($id);
-			$foster->title       	= Input::get('title');
+			$subtitle = Subtitle::find($id);
+			$subtitle->title       	= Input::get('title');
 			if (Input::hasFile('file')) {
-				$foster->photo       	= $url;
+				$subtitle->photo       	= $url;
 			}
-			$foster->url       		= Input::get('url');
-			$foster->content      	= Input::get('content');
-			$foster->categorie     = Input::get('categorie');
-			$foster->save();
+			$subtitle->url       		= Input::get('url');
+			$subtitle->content      	= Input::get('content');
+			$subtitle->categorie     = Input::get('categorie');
+			$subtitle->save();
 
 if (Input::hasFile('file')) {
 			Upload::create([
@@ -172,11 +172,11 @@ if (Input::hasFile('file')) {
 	public function destroy($id)
 	{
 
-		$foster = Foster::find($id);
-		$path = $foster->url;
+		$subtitle = Subtitle::find($id);
+		$path = $subtitle->url;
 
 		File::delete(public_path() . '/' . $path);
-		$foster->delete();
+		$subtitle->delete();
 
 		return Redirect::to('admin')->with('success', 'Projet supprimé.');
 	}
@@ -185,7 +185,7 @@ if (Input::hasFile('file')) {
 
 	public function postSearch()
 	{
-		$results = DB::table('fosters');
+		$results = DB::table('subtitles');
 
 		if(Input::get('keywords'))
 			$results->where('title', 'LIKE', '%' . Input::get('keywords') . '%')
@@ -202,15 +202,15 @@ if (Input::hasFile('file')) {
 
 		$results = $results->get();
 
-		return View::make('fosters.search', compact('results'));
+		return View::make('subtitles.search', compact('results'));
 	}
 
 
 
 	public function admin()
 	{
-		$fosters = Foster::all();
-		return View::make('fosters.admin', compact('fosters'));
+		$subtitles = Subtitle::all();
+		return View::make('subtitles.admin', compact('subtitles'));
 	}
 
 

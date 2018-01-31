@@ -2,7 +2,7 @@
 
 @section('title')
 @parent
-:: translations
+:: subtitles
 @stop
 
 @section('content')
@@ -13,15 +13,15 @@ COUCOU
 <div class="alert alert-info">{{ Session::get('message') }}</div>
 @endif
 
-<center>
+<!-- <center>
    <div class="row">
-@foreach ($translations as $translation)
+@foreach ($subtitles as $subtitle)
 <div class="col-lg-4">
-   <a href="translations/{{ $translation->id }}"><img class="img-thumbnail" src="{{ $translation->photo }}"></a>
-      <h3>{{ $translation->title }}</h3>
-      <p>{{ $translation->content }}</p>
+   <a href="subtitles/{{ $subtitle->id }}"><img class="img-thumbnail" src="{{ $subtitle->photo }}"></a>
+      <h3>{{ $subtitle->title }}</h3>
+      <p>{{ $subtitle->content }}</p>
 
-      <p><a class="btn btn-default" href="translations/{{ $project->id }}" role="button">Read More</a></p>
+      <p><a class="btn btn-default" href="subtitles/{{ $subtitle->id }}" role="button">Read More</a></p>
 <br><br><br>      </div>
 
 
@@ -30,11 +30,12 @@ COUCOU
 </div>
 
 
-{{ $translations->links(); }}
+{{ $subtitles->links(); }}
 
 
 
-</center>
+</center> -->
+
 
 
 @stop

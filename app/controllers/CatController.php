@@ -1,21 +1,21 @@
-<?php
+*<?php
 
-class TranslationController extends BaseController {
+class CatController extends BaseController {
 
 	public function index()
 	{
-		$translations = DB::table('translations')
+		$cats = DB::table('cats')
 		->orderBy('created_at', 'desc')
 		->paginate(6);
 
-		return View::make('translations.index', compact('translations'));
+		return View::make('cats.index', compact('cats'));
 	}
 
 
 
 	public function create()
 	{
-		return View::make('translations.create');
+		return View::make('cats.create');
 	}
 
 
@@ -35,7 +35,7 @@ class TranslationController extends BaseController {
 
 		if ($validator->fails())
 		{
-			return Redirect::to('translations/create')
+			return Redirect::to('cats/create')
 			->withErrors($validator)
 			->withInput(Input::except('password'));
 		}
@@ -51,25 +51,25 @@ class TranslationController extends BaseController {
 			$upload_success = Input::file('file')->move($destinationPath, $filename . '.' . $extension);
 			$url = 'files/' . $filename . '.' . $extension;
 
-			$translation = new Translation;
-			$translation->title      	= Input::get('title');
-			$translation->photo 			= $url;
-			$translation->url					= Input::get('url');
-			$translation->content			= Input::get('content');
-			$translation->user_id 		= Auth::user()->id;
-			$translation->categorie   = Input::get('categorie');
-			$translation->save();
+			$cat = new Cat;
+			$cat->title      	= Input::get('title');
+			$cat->photo 			= $url;
+			$cat->url					= Input::get('url');
+			$cat->content			= Input::get('content');
+			$cat->user_id 		= Auth::user()->id;
+			$cat->categorie   = Input::get('categorie');
+			$cat->save();
 
 
 
-			// $translation = new Translation;
-			// $translation->title      	= Input::get('title');
-			// $translation->photo 		= $url;
-			// $translation->url			= Input::get('url');
-			// $translation->content		= Input::get('content');
-			// $translation->user_id 		= Auth::user()->id;
-			// $translation->categorie     = Input::get('categorie');
-			// $translation->save();
+			// $cat = new Cat;
+			// $cat->title      	= Input::get('title');
+			// $cat->photo 		= $url;
+			// $cat->url			= Input::get('url');
+			// $cat->content		= Input::get('content');
+			// $cat->user_id 		= Auth::user()->id;
+			// $cat->categorie     = Input::get('categorie');
+			// $cat->save();
 
 			Upload::create([
 				'name'       	=> $filename,
@@ -88,21 +88,21 @@ class TranslationController extends BaseController {
 
 	public function show($id)
 	{
-		$translation = Translation::find($id);
+		$cat = Cat::find($id);
 
-		return View::make('translations.show', compact('translation'));
+		return View::make('cats.show', compact('cat'));
 	}
 
 
 	public function edit($id)
 	{
 
-		$translation = Translation::find($id);
+		$cat = Cat::find($id);
 
-		if ($translation)
+		if ($cat)
 		{
-			return View::make('translations.edit')
-			->with('translation', $translation);
+			return View::make('cats.edit')
+			->with('cat', $cat);
 		}
 		else
 		{
@@ -135,21 +135,21 @@ class TranslationController extends BaseController {
 
 
 		if ($validator->fails()) {
-			return Redirect::to('translation/' . $id . '/edit')
+			return Redirect::to('cat/' . $id . '/edit')
 			->withErrors($validator)
 			->withInput(Input::except('password'));
 		}
 		else
 		{
-			$translation = Translation::find($id);
-			$translation->title       	= Input::get('title');
+			$cat = Cat::find($id);
+			$cat->title       	= Input::get('title');
 			if (Input::hasFile('file')) {
-				$translation->photo       	= $url;
+				$cat->photo       	= $url;
 			}
-			$translation->url       		= Input::get('url');
-			$translation->content      	= Input::get('content');
-			$translation->categorie     = Input::get('categorie');
-			$translation->save();
+			$cat->url       		= Input::get('url');
+			$cat->content      	= Input::get('content');
+			$cat->categorie     = Input::get('categorie');
+			$cat->save();
 
 if (Input::hasFile('file')) {
 			Upload::create([
@@ -172,11 +172,11 @@ if (Input::hasFile('file')) {
 	public function destroy($id)
 	{
 
-		$translation = Translation::find($id);
-		$path = $translation->url;
+		$cat = Cat::find($id);
+		$path = $cat->url;
 
 		File::delete(public_path() . '/' . $path);
-		$translation->delete();
+		$cat->delete();
 
 		return Redirect::to('admin')->with('success', 'Projet supprimé.');
 	}
@@ -185,7 +185,7 @@ if (Input::hasFile('file')) {
 
 	public function postSearch()
 	{
-		$results = DB::table('translations');
+		$results = DB::table('cats');
 
 		if(Input::get('keywords'))
 			$results->where('title', 'LIKE', '%' . Input::get('keywords') . '%')
@@ -202,15 +202,15 @@ if (Input::hasFile('file')) {
 
 		$results = $results->get();
 
-		return View::make('translations.search', compact('results'));
+		return View::make('cats.search', compact('results'));
 	}
 
 
 
 	public function admin()
 	{
-		$translations = Translation::all();
-		return View::make('translations.admin', compact('translations'));
+		$cats = Cat::all();
+		return View::make('cats.admin', compact('cats'));
 	}
 
 
