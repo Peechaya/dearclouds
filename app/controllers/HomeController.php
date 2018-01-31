@@ -24,6 +24,34 @@ class HomeController extends BaseController {
 			return View::make('index', compact('projects'));
 	}
 
+
+	public function showWebProjects()
+	{
+		$projects = DB::table('projects')
+		->orderBy('created_at', 'desc')
+		->paginate(6);
+
+			return View::make('webprojects', compact('projects'));
+	}
+
+	public function showTranslations()
+	{
+		$projects = DB::table('translations')
+		->orderBy('created_at', 'desc')
+		->paginate(6);
+
+			return View::make('transkations', compact('projects'));
+	}
+
+	public function showFoster()
+	{
+		$projects = DB::table('fosters')
+		->orderBy('created_at', 'desc')
+		->paginate(6);
+
+			return View::make('fosterfamily', compact('projects'));
+	}
+
 	public function showAdmin()
 	{
 		$projects = Project::all();

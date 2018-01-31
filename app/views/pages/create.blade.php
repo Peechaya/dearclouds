@@ -20,13 +20,18 @@
 </div>
 
 <div class="form-group">
-	{{Form::label('photo','Photo')}}
-	{{Form::text('photo', null,array('class' => 'form-control'))}}
+	{{Form::label('photo','Image')}}
+	{{ Form::file('file','',array('id'=>'')) }}
 </div>
 
 <div class="form-group">
 	{{Form::label('content','Content')}}
-	{{Form::textarea('content', null,array('class' => 'form-control'))}}
+	{{Form::textarea('content', null,array('class' => 'form-control', 'id' => 'content'))}}
+
+	<script type="text/javascript">
+    CKEDITOR.replace( 'content' );
+</script>
+
 </div>
 <div class="form-group">
 	{{Form::label('url','Lien')}}

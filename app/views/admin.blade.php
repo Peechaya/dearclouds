@@ -46,14 +46,10 @@
     </div>
     @else
 
-
-
-<div class="container">
-
-
-
-<a href="pages/create" class="btn btn-default btn-lg">Pages</a> <a href="projects/create" class="btn btn-default btn-lg">Projects</a>
-
+<a href="pages/create" class="btn btn-default btn-lg">+Page</a>
+<a href="projects/create" class="btn btn-default btn-lg">+Project</a>
+<a href="translation/create" class="btn btn-default btn-lg">+Translation</a>
+<a href="fosters/create" class="btn btn-default btn-lg">+Foster</a>
 
 <h1>Derniers projets</h1>
 
@@ -79,12 +75,12 @@
 
         {{ Form::open(array('url' => 'projects/' . $project->id, 'class' => 'pull-right')) }}
         {{ Form::hidden('_method', 'DELETE') }}
-        {{ Form::submit('Supprimer', array('class' => 'btn btn-danger')) }}
+        {{ Form::submit('Supprimer', array('class' => 'btn pink darken-3')) }}
         {{ Form::close() }}
 
-        <a class="btn btn-small btn-success" href="{{ URL::to('projects/' . $project->id) }}" target="_blank">Voir</a>
+        <a class="btn light-green" href="{{ URL::to('projects/' . $project->id) }}" target="_blank">Voir</a>
 
-        <a class="btn btn-small btn-warning" href="{{ URL::to('projects/' . $project->id . '/edit') }}">Editer</a>
+        <a class="btn" href="{{ URL::to('projects/' . $project->id . '/edit') }}">Editer</a>
 
       </td>
     </tr>
@@ -98,7 +94,7 @@
 
 
     @endif
-</div>
+
 </div>
 
 {{ Form::close() }}

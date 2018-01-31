@@ -42,6 +42,9 @@
     {{Form::label('content','Content')}}
     {{Form::textarea('content', null,array('class' => 'form-control'))}}
 </div>
+<script type="text/javascript">
+  CKEDITOR.replace( 'content' );
+</script>
 <div class="form-group">
     {{Form::label('url','Lien')}}
     {{Form::text('url', null,array('class' => 'form-control'))}}
@@ -52,7 +55,7 @@
 
     {{ Form::close() }}
 
-    
+
     @endif
 
 

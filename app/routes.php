@@ -13,6 +13,9 @@
 
 Route::get('/', 'HomeController@showIndex');
 Route::get('cv', 'HomeController@showCv');
+Route::get('webprojects', 'HomeController@showWebProjects');
+Route::get('webtranslations', 'HomeController@showTranslations');
+Route::get('fosterfamily', 'HomeController@showFoster');
 Route::get('portfolio', 'ProjectController@portfolio');
 Route::get('project/{id}', 'HomeController@showProject');
 
@@ -33,7 +36,8 @@ Route::group(array('before' => 'admin'), function()
 
 	Route::resource('pages', 'PageController');
 	Route::resource('projects', 'ProjectController');
-	Route::resource('users', 'UserController');
+	Route::resource('translations', 'TranslationController');
+	Route::resource('fosters', 'FosterController');
 	// Route::resource('admin', 'AdminController');
 
 });

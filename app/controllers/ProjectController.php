@@ -154,7 +154,7 @@ class ProjectController extends BaseController {
 			if (Input::hasFile('file')) {
 				$project->photo       	= $url;
 			}
-			$project->url       	= Input::get('url');
+			$project->url       		= Input::get('url');
 			$project->content      	= Input::get('content');
 			$project->categorie     = Input::get('categorie');
 			$project->save();

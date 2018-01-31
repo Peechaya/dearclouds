@@ -8,6 +8,43 @@
 @section('content')
 
 
+<div class="row">
+				<a href="webprojects"> <div class="col s6" id="webdeveloper">
+						<div class="desc">
+						 <h2>Web developer</h2>
+						 <p>You have to make your websites with love these days!</p>
+						 </div>
+				 </div>
+				 </a>
+
+				 <a href="translations"><div class="col s6" id="translator">
+						 <div class="desc">
+								 <h2>Translator</h2>
+								 <p>I'm translating shows and movies since 15 and i can't get enough</p>
+						 </div></div></a>
+
+				 <a href="fosterfamily"><div class="col s6" id="foster">
+						 <div class="desc">
+								 <h2>Fostering Cats</h2>
+								 <p>Do you have any idea on how many cats are mistreated?</p>
+						 </div></div></a>
+
+				 <a href="https://www.etsy.com/shop/MadCloudsStudio" target="_blank"><div class="col s6" id="madclouds">
+						 <div class="desc">
+								 <h2>MadClouds Studio</h2>
+								 <p>A shop where you can find ready-to-go items or order many services</p>
+						 </div></div></a>
+			 </div>
+
+
+<div id="about">
+
+
+										 <img src="img/profile.png">
+
+			 </div>
+
+
 <!-- <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
@@ -31,7 +68,7 @@
         </div>
     </section> -->
 
-		<section id="services">
+		<!-- <section id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -130,5 +167,5 @@
 
 
 
-</div>
+</div> -->
 @stop
