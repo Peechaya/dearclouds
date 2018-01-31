@@ -10110,118 +10110,134 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /*shape-rendering: crispEdges;*/
 }
 
-/* line 51, ../sass/materialize.scss */
+/* line 46, ../sass/materialize.scss */
+.background-image {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+
+/* line 64, ../sass/materialize.scss */
+#webdeveloper, #translator, #foster, #madclouds {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+/* line 69, ../sass/materialize.scss */
 #webdeveloper .desc, #translator .desc, #foster .desc, #madclouds .desc {
+  z-index: 2;
   position: relative;
   top: 36%;
   text-align: center;
   color: white;
   text-shadow: 0px 0px 10px black;
 }
-/* line 59, ../sass/materialize.scss */
+/* line 78, ../sass/materialize.scss */
 #webdeveloper p, #translator p, #foster p, #madclouds p {
+  z-index: 2;
   margin-top: -15px;
   text-transform: uppercase;
   font-size: 85%;
 }
 
-/* line 67, ../sass/materialize.scss */
-#webdeveloper:hover, #translator:hover, #foster:hover, #madclouds:hover {
-  -webkit-filter: grayscale(0%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
-}
-/* line 71, ../sass/materialize.scss */
+/* line 89, ../sass/materialize.scss */
 #webdeveloper:hover h2, #webdeveloper:hover p, #translator:hover h2, #translator:hover p, #foster:hover h2, #foster:hover p, #madclouds:hover h2, #madclouds:hover p {
   -webkit-filter: grayscale(0%) blur(0px) !important;
   /* Safari 6.0 - 9.0 */
   filter: grayscale(0%) blur(0px) !important;
 }
+/* line 94, ../sass/materialize.scss */
+#webdeveloper:hover .background-image, #translator:hover .background-image, #foster:hover .background-image, #madclouds:hover .background-image {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')";
+  /* IE8 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand');
+  /* IE6 and 7 */
+}
 
-/* line 78, ../sass/materialize.scss */
+/* line 108, ../sass/materialize.scss */
 #webdeveloper {
-  position: absolute;
   height: 50% !important;
   width: 50% !important;
-  background-image: url("../img/header.jpg");
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  z-index: 1;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
 }
-/* line 92, ../sass/materialize.scss */
+/* line 113, ../sass/materialize.scss */
+#webdeveloper .background-image {
+  background-image: url("../img/header.jpg");
+}
+/* line 117, ../sass/materialize.scss */
 #webdeveloper h2 {
   font-family: "Nova Mono";
 }
 
-/* line 97, ../sass/materialize.scss */
+/* line 122, ../sass/materialize.scss */
 #translator {
-  position: absolute;
   height: 50% !important;
   width: 50% !important;
   margin-left: 50%;
-  z-index: 1;
-  background-image: url("../img/translations.jpg");
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  transition: .5s ease;
 }
-/* line 111, ../sass/materialize.scss */
+/* line 128, ../sass/materialize.scss */
+#translator .background-image {
+  background-image: url("../img/translations.jpg");
+}
+/* line 132, ../sass/materialize.scss */
 #translator h2 {
   font-family: 'Abril Fatface', cursive;
 }
 
-/* line 116, ../sass/materialize.scss */
+/* line 137, ../sass/materialize.scss */
 #foster {
-  position: absolute;
   height: 50% !important;
   width: 50% !important;
   top: 50%;
-  z-index: 1;
-  background-image: url("../img/foster.JPG");
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  transition: .5s ease;
 }
-/* line 130, ../sass/materialize.scss */
+/* line 143, ../sass/materialize.scss */
+#foster .background-image {
+  background-image: url("../img/foster.JPG");
+}
+/* line 147, ../sass/materialize.scss */
 #foster h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* line 135, ../sass/materialize.scss */
+/* line 152, ../sass/materialize.scss */
 #madclouds {
-  position: absolute;
   height: 50% !important;
   width: 50% !important;
   top: 50%;
   left: 50%;
-  z-index: 1;
-  background-image: url("https://static.tumblr.com/fd4f9c57ad39c51dac01f6739a0757b2/z22p5iv/58yow335e/tumblr_static_5jdt19geapogocg0ko8k0448g.png");
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  transition: .5s ease;
 }
-/* line 150, ../sass/materialize.scss */
+/* line 159, ../sass/materialize.scss */
+#madclouds .background-image {
+  background-image: url("https://static.tumblr.com/fd4f9c57ad39c51dac01f6739a0757b2/z22p5iv/58yow335e/tumblr_static_5jdt19geapogocg0ko8k0448g.png");
+}
+/* line 163, ../sass/materialize.scss */
 #madclouds h2 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-/* line 155, ../sass/materialize.scss */
+/* line 168, ../sass/materialize.scss */
 #about {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10235,8 +10251,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   transition: transform .8s ease-in-out;
 }
 
-/* line 168, ../sass/materialize.scss */
+/* line 181, ../sass/materialize.scss */
 #about:hover {
+  z-index: 4;
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }

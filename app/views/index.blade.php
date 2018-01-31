@@ -10,6 +10,9 @@
 
 <div class="row">
 	<a href="webprojects"> <div class="col s6" id="webdeveloper">
+
+		<div class="background-image"></div>
+
 		<div class="desc">
 			<h2 class="animated jackInTheBox"><span
 				class="txt-rotate"
@@ -17,22 +20,32 @@
 				data-rotate='[ "Web developer", "Webmaster", "Webdesigner", "Web Integrator" ]'></span></h2>
 				<p class="animated slideInLeft">You have to make your websites with love these days!</p>
 			</div>
+
 		</div>
 	</a>
 
 	<a href="translations"><div class="col s6" id="translator">
+
+		<div class="background-image"></div>
+
 		<div class="desc">
 			<h2 class="animated jackInTheBox">Translator</h2>
 			<p class="animated slideInRight">I'm translating shows and movies since 15 and i can't get enough</p>
 		</div></div></a>
 
 		<a href="fosterfamily"><div class="col s6" id="foster">
+
+			<div class="background-image"></div>
+
 			<div class="desc">
 				<h2 class="animated jackInTheBox">Fostering Cats</h2>
 				<p class="animated slideInLeft">Do you have any idea on how many cats are mistreated?</p>
 			</div></div></a>
 
 			<a href="https://www.etsy.com/shop/MadCloudsStudio" target="_blank"><div class="col s6" id="madclouds">
+
+				<div class="background-image"></div>
+
 				<div class="desc">
 					<h2 class="animated jackInTheBox">MadClouds Studio</h2>
 					<p class="animated slideInRight">A shop where you can find ready-to-go items or order many services</p>

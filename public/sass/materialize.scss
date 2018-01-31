@@ -43,12 +43,31 @@
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
 
-.blackfilter {
-
+.background-image {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
 }
 
+
 #webdeveloper, #translator, #foster, #madclouds {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+
   .desc {
+    z-index: 2;
     position: relative;
     top: 36%;
     text-align: center;
@@ -57,6 +76,7 @@
   }
 
   p {
+    z-index: 2;
     margin-top: -15px;
     text-transform: uppercase;
     font-size: 85%;
@@ -65,29 +85,34 @@
 
 
 #webdeveloper:hover, #translator:hover, #foster:hover, #madclouds:hover {
-  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
 
   h2, p {
     -webkit-filter: grayscale(0%) blur(0px) !important; /* Safari 6.0 - 9.0 */
     filter: grayscale(0%) blur(0px) !important;
   }
 
+  .background-image {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); /* IE 9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
+     filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */
+  }
+
 }
 
 #webdeveloper {
 
-  position: absolute;
   height: 50% !important;
   width: 50% !important;
-  background-image: url('../img/header.jpg');
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  z-index: 1;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+
+    .background-image {
+      background-image: url('../img/header.jpg');
+    }
 
     h2 {
       font-family: "Nova Mono";
@@ -96,17 +121,13 @@
 
 #translator {
 
-  position: absolute;
   height: 50% !important;
   width: 50% !important;
   margin-left: 50%;
-  z-index: 1;
-  background-image: url('../img/translations.jpg');
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  transition: .5s ease;
+
+    .background-image {
+      background-image: url('../img/translations.jpg');
+    }
 
     h2 {
       font-family: 'Abril Fatface', cursive;
@@ -114,18 +135,14 @@
 }
 
 #foster {
-
-  position: absolute;
+;
   height: 50% !important;
   width: 50% !important;
   top: 50%;
-  z-index: 1;
-  background-image: url('../img/foster.JPG');
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  transition: .5s ease;
+
+    .background-image {
+      background-image: url('../img/foster.JPG');
+    }
 
     h2 {
       font-family: 'Montserrat', sans-serif;
@@ -134,18 +151,14 @@
 
 #madclouds {
 
-  position: absolute;
   height: 50% !important;
   width: 50% !important;
   top: 50%;
   left: 50%;
-  z-index: 1;
-  background-image: url('https://static.tumblr.com/fd4f9c57ad39c51dac01f6739a0757b2/z22p5iv/58yow335e/tumblr_static_5jdt19geapogocg0ko8k0448g.png');
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  transition: .5s ease;
+
+    .background-image {
+      background-image: url('https://static.tumblr.com/fd4f9c57ad39c51dac01f6739a0757b2/z22p5iv/58yow335e/tumblr_static_5jdt19geapogocg0ko8k0448g.png');
+    }
 
     h2 {
       font-family: 'Josefin Sans', sans-serif;
@@ -153,7 +166,7 @@
 }
 
 #about {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
    top: 50%;
    left: 50%;
@@ -166,6 +179,7 @@
 }
 
 #about:hover {
+  z-index: 4;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
