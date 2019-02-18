@@ -64,9 +64,11 @@
   position: relative;
   width: 100%;
   height: 100%;
+  display: none;
 }
 .anim path {
   stroke-width: 2;
+  display: none;
 }
 
 #webdeveloper, #translator, #foster, #madclouds {
@@ -111,6 +113,18 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
      filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */
   }
+
+  .anim, .anim svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline;
+  }
+  .anim path {
+    stroke-width: 2;
+    display: inline;
+  }
+
 
 }
 

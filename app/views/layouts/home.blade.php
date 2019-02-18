@@ -70,6 +70,54 @@ anime({
 }
     </script>
 
+    <script>
+    (function() {
+console.log(anime.easings);
+this.openTheMenu = function() {
+  let ht = window.innerHeight + 'px';
+  let wt = window.innerWidth + 'px';
+  let section-hover = document.querySelector('.menu-icon');
+  let menuList = document.querySelector('.menu-list');
+  let timeLine = anime.timeline();
+  timeLine.add({
+      targets: '#webdeveloper',
+      height: {
+        value: ht
+      },
+      width: {
+        value: wt
+      },
+      borderRadius: {
+        value: '0px',
+        duration: 300,
+        easing: 'linear'
+      },
+      easing: 'easeInQuart',
+      duration: 500,
+      backgroundColor: {
+        value: '#282830'
+      },
+      begin: function(anim) {
+        console.log(anim.began);
+        section-hover.style.display = "none";
+      },
+      complete: function(anim) {
+        console.log(anim.completed);
+        menuList.style.display = "block";
+      }
+    })
+    .add({
+      targets: '.el',
+      opacity: 1,
+      easing: 'easeInSine',
+      duration: function(el, i, l) {
+        return i * 500;
+      }
+    });
+}
+})();
+    </script>
+
 
 
     </body>

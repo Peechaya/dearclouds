@@ -9,7 +9,7 @@
 
 
 <div class="row">
-	<a href="webprojects"> <div class="col s6" id="webdeveloper">
+	<a href="webprojects"> <div class="col s6" id="webdeveloper" onmouseover="openTheMenu()" class="section-hover">
 
 		<div class="background-image">
 
