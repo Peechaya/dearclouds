@@ -10163,12 +10163,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   text-transform: uppercase;
   font-size: 85%;
   font-family: 'Exo 2', sans-serif;
-  visibility: hidden;
+  display: none;
 }
 
 /* line 99, ../sass/materialize.scss */
 #webdeveloper:hover p, #translator:hover p, #foster:hover p, #madclouds:hover p {
-  visibility: visible;
+  display: inline;
 }
 /* line 103, ../sass/materialize.scss */
 #webdeveloper:hover .background-image, #translator:hover .background-image, #foster:hover .background-image, #madclouds:hover .background-image {
