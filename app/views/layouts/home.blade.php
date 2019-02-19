@@ -71,53 +71,51 @@ anime({
     </script>
 
 <script>
-var btn = document.getElementById('webdeveloper');
-var btn2 = document.getElementById('cta2');
-
-        btn.onclick = function () {
-            var morphing = anime({
-                targets: '.polymorph',
-                points: [
-                    { value: '215, 110 0, 110 0, 0 47.7, 0 67, 76' },
-                    { value: '215, 110 0, 110 0, 0 0, 0 67, 76' }
-                ],
-                easing: 'easeOutQuad',
-                duration: 1200,
-                loop: false
-            });
-
-            anime({
-                targets: '#webdeveloper-hover',
-                opacity: 1,
-                duration: 500,
-                translateY: 150
-            })
-
-            var promise = morphing.finished.then(() => {
-
-                btn2.onclick = function () {
-                var morphing = anime({
-                targets: '.polymorph',
-                points: [
-                    { value: '215, 110 0, 110 0, 0 47.7, 0 67, 76' },
-                    { value: '215,110 0,110 0,0 49.3,0 215,0' }
-                ],
-                easing: 'easeOutQuad',
-                duration: 1200,
-                loop: false
-            });
-
-            anime({
-                targets: '#webdeveloper-hover',
-                opacity: 0,
-                duration: 500,
-                translateY: -800
-            })
-
-            };
-
-        })
-}
+(function() {
+	console.log(anime.easings);
+	this.openTheMenu = function() {
+		let ht = window.innerHeight + 'px';
+		let wt = window.innerWidth + 'px';
+		let menuIcon = document.querySelector('.menu-icon');
+		let menuList = document.querySelector('.menu-list');
+		let timeLine = anime.timeline();
+		timeLine.add({
+				targets: '.menu-container',
+				height: {
+					value: ht
+				},
+				width: {
+					value: wt
+				},
+				borderRadius: {
+					value: '0px',
+					duration: 300,
+					easing: 'linear'
+				},
+				easing: 'easeInQuart',
+				duration: 500,
+				backgroundColor: {
+					value: '#282830'
+				},
+				begin: function(anim) {
+					console.log(anim.began);
+					menuIcon.style.display = "none";
+				},
+				complete: function(anim) {
+					console.log(anim.completed);
+					menuList.style.display = "block";
+				}
+			})
+			.add({
+				targets: '.el',
+				opacity: 1,
+				easing: 'easeInSine',
+				duration: function(el, i, l) {
+					return i * 500;
+				}
+			});
+	}
+})();
 </script>
 
     </body>

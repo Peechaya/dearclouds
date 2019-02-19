@@ -11,6 +11,21 @@
 <div class="row">
 	<div class="col s6" id="webdeveloper">
 
+		<div class="menu-container">
+         <img src="https://png.icons8.com/android/48/ffffff/menu.png" width="24" onclick="openTheMenu()" class="menu-icon">
+         <div id="functionBasedDuration" class="menu-list">
+            <div class="line">
+               <div class="el">link 1</div>
+            </div>
+            <div class="line">
+               <div class="el">link 2</div>
+            </div>
+            <div class="line">
+               <div class="el">link 3</div>
+            </div>
+         </div>
+      </div>
+
 		<div class="background-image">
 
 			<div class="anim">
@@ -27,16 +42,10 @@
 				<p class="animated slideInLeft">You have to make your websites with love these days!</p>
 			</div>
 
-			<svg viewBox="0 0 215 110">
-
-        <polygon class="polymorph" points="215,110 0,110 0,0 49.3,0 215,0" />
-
-			</svg>
-
 			<div id="webdeveloper-hover">
 				 Blablabla
 
-				 <a href="webprojects">Enter</a>  <button id="cta2">Go Back</button>
+				 <a href="webprojects">Enter</a>
 			</div>
 
 		</div>
