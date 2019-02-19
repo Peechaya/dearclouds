@@ -43,6 +43,27 @@
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
 
+
+.menu-container{
+	background-color: #FF6766;
+	padding: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu-list{
+	display: none;
+	list-style-type: none;
+	color: #fff;
+	font-size: 22px;
+}
+.el{
+	opacity: 0;
+}
+
 .background-image {
   position: absolute;
   z-index: 1;
@@ -69,25 +90,8 @@
   stroke-width: 2;
 }
 
-
-.polymorph {
-  fill: #398f5a;
-}
-
-#blip{
-    position: absolute;
-    color: #398f5a;
-    right:  25%;
-    top: 0%;
-    opacity: 0;
-    width: 30%;
-    transform: translateY(-800px);
-}
-
-
 #webdeveloper, #translator, #foster, #madclouds {
-  // overflow: hidden;
-  outline: 0;
+  overflow: hidden;
   position: absolute;
   z-index: 1;
 
