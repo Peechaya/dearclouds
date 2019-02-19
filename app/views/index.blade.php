@@ -27,23 +27,20 @@
 				<p class="animated slideInLeft">You have to make your websites with love these days!</p>
 			</div>
 
+			<div id="functionBasedDuration" class="menu-list">
+				 <div class="line">
+						<div class="el">link 1</div>
+				 </div>
+				 <div class="line">
+						<div class="el">link 2</div>
+				 </div>
+				 <div class="line">
+						<div class="el">link 3</div>
+				 </div>
+			</div>
+
 		</div>
 	</a>
-
-	<div class="menu-container">
-         <img src="https://png.icons8.com/android/48/ffffff/menu.png" width="24" onmouseover="openTheMenu()" class="menu-icon">
-         <div id="functionBasedDuration" class="menu-list">
-            <div class="line">
-               <div class="el">link 1</div>
-            </div>
-            <div class="line">
-               <div class="el">link 2</div>
-            </div>
-            <div class="line">
-               <div class="el">link 3</div>
-            </div>
-         </div>
-      </div>
 
 	<a href="translations"><div class="col s6" id="translator">
 

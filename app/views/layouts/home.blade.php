@@ -71,16 +71,18 @@ anime({
     </script>
 
 <script>
+var webdeveloper = document.getElementById('webdeveloper');
+
 (function() {
 	console.log(anime.easings);
-	this.openTheMenu = function() {
+	webdeveloper.onmouseover = function() {
 		let ht = window.innerHeight + 'px';
 		let wt = window.innerWidth + 'px';
-		let menuIcon = document.querySelector('.menu-icon');
+		let menuIcon = document.querySelector('#webdeveloper');
 		let menuList = document.querySelector('.menu-list');
 		let timeLine = anime.timeline();
 		timeLine.add({
-				targets: '.menu-container',
+				targets: '#webdeveloper',
 				height: {
 					value: ht
 				},
@@ -106,14 +108,6 @@ anime({
 					menuList.style.display = "block";
 				}
 			})
-			.add({
-				targets: '.el',
-				opacity: 1,
-				easing: 'easeInSine',
-				duration: function(el, i, l) {
-					return i * 500;
-				}
-			});
 	}
 })();
 </script>
