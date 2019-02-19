@@ -71,45 +71,7 @@ anime({
     </script>
 
 <script>
-var webdeveloper = document.getElementById('webdeveloper');
 
-(function() {
-	console.log(anime.easings);
-	webdeveloper.onmouseover = function() {
-		let ht = window.innerHeight + 'px';
-		let wt = window.innerWidth + 'px';
-		let menuIcon = document.querySelector('#webdeveloper');
-		let menuList = document.querySelector('.menu-list');
-		let timeLine = anime.timeline();
-		timeLine.add({
-				targets: '#webdeveloper',
-				height: {
-					value: ht
-				},
-				width: {
-					value: wt
-				},
-				borderRadius: {
-					value: '0px',
-					duration: 300,
-					easing: 'linear'
-				},
-				easing: 'easeInQuart',
-				duration: 500,
-				backgroundColor: {
-					value: '#282830'
-				},
-				begin: function(anim) {
-					console.log(anim.began);
-					menuIcon.style.display = "none";
-				},
-				complete: function(anim) {
-					console.log(anim.completed);
-					menuList.style.display = "block";
-				}
-			})
-	}
-})();
 </script>
 
     </body>

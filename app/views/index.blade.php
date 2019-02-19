@@ -27,16 +27,8 @@
 				<p class="animated slideInLeft">You have to make your websites with love these days!</p>
 			</div>
 
-			<div id="functionBasedDuration" class="menu-list">
-				 <div class="line">
-						<div class="el">link 1</div>
-				 </div>
-				 <div class="line">
-						<div class="el">link 2</div>
-				 </div>
-				 <div class="line">
-						<div class="el">link 3</div>
-				 </div>
+			<div id="webdeveloper-hover">
+				 Blablabla
 			</div>
 
 		</div>
