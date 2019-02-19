@@ -30,6 +30,20 @@
 		</div>
 	</a>
 
+	<svg viewBox="0 0 215 110">
+
+        <polygon class="polymorph" points="215,110 0,110 0,0 49.3,0 215,0" />
+
+    </svg>
+
+    <div id="blip">
+        <h1>Woosh! That morphed!</h1>
+        <p>Isn't it cool? Here's a little more text to know that what AnimeJS can do to your webpage.</p>
+        <p>Get this awesome JavaScript library <a href="http://animejs.com/" target="_blank" style="text-decoration: none">here</a></p>
+
+        <button id="cta2">Go Back</button>
+</div>
+
 	<a href="translations"><div class="col s6" id="translator">
 
 		<div class="background-image"></div>

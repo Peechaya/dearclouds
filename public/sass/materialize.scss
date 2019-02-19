@@ -69,6 +69,22 @@
   stroke-width: 2;
 }
 
+
+.polymorph {
+  fill: #398f5a;
+}
+
+#blip{
+    position: absolute;
+    color: #398f5a;
+    right:  25%;
+    top: 0%;
+    opacity: 0;
+    width: 30%;
+    transform: translateY(-800px);
+}
+
+
 #webdeveloper, #translator, #foster, #madclouds {
   overflow: hidden;
   position: absolute;
@@ -95,13 +111,6 @@
 
 
 #webdeveloper:hover, #translator:hover, #foster:hover, #madclouds:hover {
-
-  height: 100% !important;
-  width: 100% !important;
-  position: absolute !important;
-  z-index: 1 !important;
-  margin: 0 !important;
-  overflow: visible !important;
 
   p {
     display: inline;
