@@ -9,7 +9,7 @@
 
 
 <div class="row">
-	<a href="webprojects"> <div class="col s6" id="webdeveloper">
+	<div class="col s6" id="webdeveloper">
 
 		<div class="background-image">
 
@@ -27,12 +27,20 @@
 				<p class="animated slideInLeft">You have to make your websites with love these days!</p>
 			</div>
 
+			<svg viewBox="0 0 215 110">
+
+        <polygon class="polymorph" points="215,110 0,110 0,0 49.3,0 215,0" />
+
+			</svg>
+
 			<div id="webdeveloper-hover">
 				 Blablabla
+
+				 <a href="webprojects">Enter</a>  <button id="cta2">Go Back</button>
 			</div>
 
 		</div>
-	</a>
+
 
 	<a href="translations"><div class="col s6" id="translator">
 

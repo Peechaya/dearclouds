@@ -10111,6 +10111,46 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 }
 
 /* line 46, ../sass/materialize.scss */
+.polymorph {
+  fill: #398f5a;
+}
+
+/* line 50, ../sass/materialize.scss */
+#cta, #cta2 {
+  position: absolute;
+  margin: 10em auto 0 auto;
+  left: 0;
+  right: 0;
+  width: 20%;
+  background: none;
+  border: 2px dashed #fff;
+  border-radius: 15px;
+  padding: 15px;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  outline: 0;
+}
+
+/* line 65, ../sass/materialize.scss */
+#cta2 {
+  width: auto;
+  margin: 30px auto;
+  background: #398f5a;
+}
+
+/* line 71, ../sass/materialize.scss */
+#webdeveloper-hover {
+  position: absolute;
+  color: #398f5a;
+  right: 25%;
+  top: 0%;
+  opacity: 0;
+  width: 30%;
+  transform: translateY(-800px);
+}
+
+/* line 81, ../sass/materialize.scss */
 .background-image {
   position: absolute;
   z-index: 1;
@@ -10129,25 +10169,25 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   -o-transition: all 1s ease;
 }
 
-/* line 63, ../sass/materialize.scss */
+/* line 98, ../sass/materialize.scss */
 .anim, .anim svg {
   position: relative;
   width: 150%;
-  height: 150%;
+  height: 200%;
 }
 
-/* line 68, ../sass/materialize.scss */
+/* line 103, ../sass/materialize.scss */
 .anim path {
   stroke-width: 3;
 }
 
-/* line 72, ../sass/materialize.scss */
+/* line 107, ../sass/materialize.scss */
 #webdeveloper, #translator, #foster, #madclouds {
   overflow: hidden;
   position: absolute;
   z-index: 1;
 }
-/* line 77, ../sass/materialize.scss */
+/* line 112, ../sass/materialize.scss */
 #webdeveloper .desc, #translator .desc, #foster .desc, #madclouds .desc {
   z-index: 2;
   position: relative;
@@ -10156,7 +10196,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   color: white;
   text-shadow: 0px 0px 5px black;
 }
-/* line 86, ../sass/materialize.scss */
+/* line 121, ../sass/materialize.scss */
 #webdeveloper p, #translator p, #foster p, #madclouds p {
   z-index: 2;
   margin-top: -15px;
@@ -10166,11 +10206,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   display: none;
 }
 
-/* line 99, ../sass/materialize.scss */
+/* line 134, ../sass/materialize.scss */
 #webdeveloper:hover p, #translator:hover p, #foster:hover p, #madclouds:hover p {
   display: inline;
 }
-/* line 103, ../sass/materialize.scss */
+/* line 138, ../sass/materialize.scss */
 #webdeveloper:hover .background-image, #translator:hover .background-image, #foster:hover .background-image, #madclouds:hover .background-image {
   -webkit-filter: grayscale(0%);
   /* Safari 6.0 - 9.0 */
@@ -10187,67 +10227,67 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /* IE6 and 7 */
 }
 
-/* line 117, ../sass/materialize.scss */
+/* line 152, ../sass/materialize.scss */
 #webdeveloper {
   height: 50% !important;
   width: 50% !important;
 }
-/* line 122, ../sass/materialize.scss */
+/* line 157, ../sass/materialize.scss */
 #webdeveloper .background-image {
   background-image: url("../img/header.jpg");
 }
-/* line 126, ../sass/materialize.scss */
+/* line 161, ../sass/materialize.scss */
 #webdeveloper h2 {
   font-family: "Nova Mono";
 }
 
-/* line 131, ../sass/materialize.scss */
+/* line 166, ../sass/materialize.scss */
 #translator {
   height: 50% !important;
   width: 50% !important;
   margin-left: 50%;
 }
-/* line 137, ../sass/materialize.scss */
+/* line 172, ../sass/materialize.scss */
 #translator .background-image {
   background-image: url("../img/translations.jpg");
 }
-/* line 141, ../sass/materialize.scss */
+/* line 176, ../sass/materialize.scss */
 #translator h2 {
   font-family: 'Abril Fatface', cursive;
 }
 
-/* line 146, ../sass/materialize.scss */
+/* line 181, ../sass/materialize.scss */
 #foster {
   height: 50% !important;
   width: 50% !important;
   top: 50%;
 }
-/* line 152, ../sass/materialize.scss */
+/* line 187, ../sass/materialize.scss */
 #foster .background-image {
   background-image: url("../img/foster.JPG");
 }
-/* line 156, ../sass/materialize.scss */
+/* line 191, ../sass/materialize.scss */
 #foster h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* line 161, ../sass/materialize.scss */
+/* line 196, ../sass/materialize.scss */
 #madclouds {
   height: 50% !important;
   width: 50% !important;
   top: 50%;
   left: 50%;
 }
-/* line 168, ../sass/materialize.scss */
+/* line 203, ../sass/materialize.scss */
 #madclouds .background-image {
   background-image: url("https://static.tumblr.com/fd4f9c57ad39c51dac01f6739a0757b2/z22p5iv/58yow335e/tumblr_static_5jdt19geapogocg0ko8k0448g.png");
 }
-/* line 172, ../sass/materialize.scss */
+/* line 207, ../sass/materialize.scss */
 #madclouds h2 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-/* line 177, ../sass/materialize.scss */
+/* line 212, ../sass/materialize.scss */
 #about {
   z-index: 3;
   position: absolute;
@@ -10263,7 +10303,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   transition: transform .8s ease-in-out;
 }
 
-/* line 190, ../sass/materialize.scss */
+/* line 225, ../sass/materialize.scss */
 #about:hover {
   z-index: 4;
   -webkit-transform: rotate(360deg);

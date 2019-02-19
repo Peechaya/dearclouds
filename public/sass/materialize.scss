@@ -43,6 +43,41 @@
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
 
+.polymorph {
+  fill: #398f5a;
+}
+
+#cta, #cta2{
+    position: absolute;
+    margin: 10em auto 0 auto;
+    left: 0;
+    right: 0;
+    width: 20%;
+    background: none;
+    border: 2px dashed #fff;
+    border-radius: 15px;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    outline: 0;
+}
+#cta2{
+    width: auto;
+    margin: 30px auto;
+    background: #398f5a;
+}
+
+#webdeveloper-hover {
+    position: absolute;
+    color: #398f5a;
+    right:  25%;
+    top: 0%;
+    opacity: 0;
+    width: 30%;
+    transform: translateY(-800px);
+}
+
 .background-image {
   position: absolute;
   z-index: 1;
@@ -63,7 +98,7 @@
 .anim, .anim svg {
   position: relative;
   width: 150%;
-  height: 150%;
+  height: 200%;
 }
 .anim path {
   stroke-width: 3;
