@@ -43,13 +43,8 @@
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/scrollreveal.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/anime.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
 
     <script>
     var pathEls = document.querySelectorAll('path');
@@ -73,50 +68,47 @@ anime({
 <script>
 (function() {
 	console.log(anime.easings);
-	this.openTheMenu = function() {
+	this.openSection = function() {
 		let ht = window.innerHeight + 'px';
 		let wt = window.innerWidth + 'px';
-		let menuIcon = document.querySelector('.menu-icon');
-		let menuList = document.querySelector('.menu-list');
+		let webdeveloper = document.querySelector('#webdeveloper');
+		let webdeveloperhover = document.querySelector('#webdeveloper-hover');
+    let translator = document.querySelector('#translator');
+    let foster = document.querySelector('#foster');
+    let madclouds = document.querySelector('#madclouds');
+    let about = document.querySelector('#about');
 		let timeLine = anime.timeline();
 		timeLine.add({
-				targets: '.menu-container',
+				targets: 'body',
+        direction: 'alternate',
 				height: {
 					value: ht
 				},
 				width: {
 					value: wt
 				},
-				borderRadius: {
-					value: '0px',
-					duration: 300,
-					easing: 'linear'
-				},
-				easing: 'easeInQuart',
+				easing: 'linear',
 				duration: 500,
 				backgroundColor: {
 					value: '#282830'
 				},
 				begin: function(anim) {
 					console.log(anim.began);
-					menuIcon.style.display = "none";
+					webdeveloper.style.display = "none";
+          translator.style.display = "none";
+          foster.style.display = "none";
+          madclouds.style.display = "none";
+          about.style.display = "none";
 				},
 				complete: function(anim) {
 					console.log(anim.completed);
-					menuList.style.display = "block";
+					webdeveloperhover.style.display = "inline";
 				}
 			})
-			.add({
-				targets: '.el',
-				opacity: 1,
-				easing: 'easeInSine',
-				duration: function(el, i, l) {
-					return i * 500;
-				}
-			});
 	}
 })();
 </script>
+
 
     </body>
     </html>

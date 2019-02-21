@@ -9,23 +9,8 @@
 
 
 <div class="row">
-	<div class="col s6" id="webdeveloper">
 
-		<div class="menu-container">
-         <img src="https://png.icons8.com/android/48/ffffff/menu.png" width="24" onclick="openTheMenu()" class="menu-icon">
-         <div id="functionBasedDuration" class="menu-list">
-            <div class="line">
-               <div class="el">link 1</div>
-            </div>
-            <div class="line">
-               <div class="el">link 2</div>
-            </div>
-            <div class="line">
-               <div class="el">link 3</div>
-            </div>
-         </div>
-      </div>
-
+	<div class="col s6" id="webdeveloper" onmouseover="openSection()">
 		<div class="background-image">
 
 			<div class="anim">
@@ -41,13 +26,12 @@
 				data-rotate='[ "Web developer", "Webmaster", "Webdesigner", "Web Integrator" ]'></span></h2>
 				<p class="animated slideInLeft">You have to make your websites with love these days!</p>
 			</div>
+		</div>
 
-			<div id="webdeveloper-hover">
-				 Blablabla
+		<div id="webdeveloper-hover">
+			 <p>Blablabla</p>
 
-				 <a href="webprojects">Enter</a>
-			</div>
-
+			 <a href="webprojects">Enter</a>
 		</div>
 
 
@@ -56,7 +40,7 @@
 		<div class="background-image"></div>
 
 		<div class="desc">
-			<h2 class="animated jackInTheBox">Translator</h2>
+			<h2 class="animated jackInTheBox translator-text">Translator</h2>
 			<p class="animated slideInRight">I'm translating shows and movies since 15 and i can't get enough</p>
 		</div></div></a>
 

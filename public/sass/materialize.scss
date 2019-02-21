@@ -43,24 +43,14 @@
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
 
-.menu-container{
-	background-color: #FF6766;
-	padding: 10px;
-	width: 50px;
-	height: 50px;
-	border-radius: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.menu-list{
+
+#webdeveloper-hover {
 	display: none;
-	list-style-type: none;
 	color: #fff;
-	font-size: 22px;
-}
-.el{
-	opacity: 0;
+  text-align: center;
+  justify-content: center;
+	align-items: center;
+  margin: 0 auto;
 }
 
 .background-image {
@@ -82,8 +72,10 @@
 
 .anim, .anim svg {
   position: relative;
-  width: 150%;
-  height: 200%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .anim path {
   stroke-width: 3;
@@ -101,6 +93,11 @@
     text-align: center;
     color: white;
     text-shadow: 0px 0px 5px black;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
   }
 
   p {
@@ -110,6 +107,11 @@
     font-size: 85%;
     font-family: 'Exo 2', sans-serif;
     display: none;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
   }
 }
 
@@ -118,6 +120,11 @@
 
   p {
     display: inline;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
   }
 
   .background-image {
