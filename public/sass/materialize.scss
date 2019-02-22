@@ -9,7 +9,7 @@
 // Reset
 @import "components/normalize";
 
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Exo+2|Josefin+Sans|Montserrat|Nova+Mono');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Exo+2|Josefin+Sans|Montserrat|Nova+Mono|Orbitron');
 
 // components
 @import "components/global";
@@ -43,15 +43,310 @@
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
 
+.glitch {
+  color: white;
+  mix-blend-mode: lighten;
 
-#webdeveloper-hover {
-	display: none;
-	color: #fff;
-  text-align: center;
-  justify-content: center;
-	align-items: center;
-  margin: 0 auto;
+  &:before,
+  &:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: transparent;
+      clip: rect(0, 0, 0, 0);
+  }
+
+  &:before {
+      left: -1px;
+      text-shadow: 1px 0 rgba(red,0.7);
+  }
+
+  &:after {
+      left: 1px;
+      text-shadow: -1px 0 rgba(blue,0.7);
+  }
+
+  &:hover {
+    &:before {
+      text-shadow: 4px 0 rgba(red,0.7);
+      animation: glitch-loop-1 0.8s infinite ease-in-out alternate-reverse;
+    }
+    &:after {
+      text-shadow: -5px 0 rgba(blue,0.7);
+      animation: glitch-loop-2 0.8s infinite ease-in-out alternate-reverse;
+    }
+  }
 }
+
+@keyframes glitch-loop-1 {
+  0% { clip: rect(36px, 9999px, 9px, 0) }
+  25% { clip: rect(25px, 9999px, 99px, 0) }
+  50% { clip: rect(50px, 9999px, 102px, 0) }
+  75% { clip: rect(30px, 9999px, 92px, 0) }
+  100% { clip: rect(91px, 9999px, 98px, 0) }
+}
+
+@keyframes glitch-loop-2 {
+  0% { top: -1px; left: 1px; clip: rect(65px, 9999px, 119px, 0) }
+  25% { top: -6px; left: 4px; clip: rect(79px, 9999px, 19px, 0) }
+  50% { top: -3px; left: 2px; clip: rect(68px, 9999px, 11px, 0) }
+  75% { top: 0px; left: -4px; clip: rect(95px, 9999px, 53px, 0) }
+  100% { top: -1px; left: -1px; clip: rect(31px, 9999px, 149px, 0) }
+}
+
+/* Layout */
+
+.desc::before,
+.desc::after {
+	pointer-events: none;
+}
+
+h2 {
+	word-spacing: -0.15rem;
+	font-weight: 300;
+}
+
+h2 span {
+  display: block;
+	font-weight: 800;
+  font-size: 2.8rem;
+}
+h2, p {
+	margin: 0;
+}
+
+p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+a{
+  text-transform: uppercase;
+  font-size: .6rem;
+  text-decoration: none;
+  color: #FFF;
+  display: block;
+  font-family: sans-serif;
+}
+// #webdeveloper .desc{
+//   background: rgba(25,235,248, .4);
+// 	margin-right: -10px;
+// }
+// #foster .desc{
+//   background: rgba(234,210,24, .4);
+// }
+// #translator .desc{
+//   background: rgba(25,235,248, .4);
+// }
+// #madclouds .desc{
+//   background: rgba(0,0,0, .4);
+// }
+/*-----------------*/
+/***** Hover *****/
+/*-----------------*/
+.effect-hover h2,
+.effect-hover h3,
+.effect-hover p,
+.effect-hover i{
+	-webkit-transition: opacity 0.35s,
+    -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+.effect-hover .desc::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 300px;
+	border: 3px solid #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+  /* remove this bit if you want it to swing up */
+	-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+}
+
+.effect-hover p:hover,
+.effect-hover p:focus {
+	opacity: 0.6;
+} /* Keeps things consistent */
+
+
+.effect-hover p,
+.effect-hover h3{
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+.effect-hover:hover .desc::before {
+	opacity: 1;
+	-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+}
+
+.effect-hover:hover h2 {
+	opacity: 0;
+	-webkit-transform:  scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+}
+.effect-hover:hover h3,
+.effect-hover:hover p{
+	opacity: 1;
+}
+.effect-hover:hover i{
+  -webkit-transform:  scale3d(2.5,2.5,2);
+	transform: scale3d(2.5,2.5,2);
+}
+
+/* Overlays */
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  z-index: 99;
+  overflow-x: hidden;
+  background: #eee;
+}
+/* Block works too, but flex is more...flexible */
+.overlay.open{
+  display: flex;
+}
+.hover-content{
+  font-size: 1.4rem;
+  padding: 10%;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* button */
+.buy-button{
+    height: 50px;
+    width: 100%;
+    margin: 2rem 0;
+    position: relative;
+    background: #eee;
+    border: 3px solid #f9efb2;
+}
+.buy-button > span {
+  display: block;
+  position: relative;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #1f1f22;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+  z-index: 10;
+  line-height: 60px;
+}
+
+.buy-button::after, .buy-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid #f9efb2;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s, ease-in-out .3s;
+}
+.buy-button::before {
+    background: #FFF;
+    margin: 0px 0 0 0px;
+    top: 5px;
+    left: 5px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    z-index: 1;
+}
+
+.buy-button:hover span,
+.buy-button:hover::before {
+    transform: translate3d(-4px, -4px, 0px);
+}
+.buy-button:hover::before{
+  background: #f9efb2;
+}
+/* Close Icon animated */
+/* Thanks to @arthurhamon */
+.close-icon{
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+}
+/* Test your cubic beziers here http://cubic-bezier.com/ */
+.close-icon div {
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    width: 36px;
+
+}
+.close-icon div:first-child {
+    transform: translate3d(0px, 10px, 0px) rotate3d(0, 0, 1, -45deg);
+}
+.close-icon div:first-child::after, .close-icon div:first-child::before {
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+.close-icon div:last-child {
+    transform: translate3d(0px, 8px, 0px) rotate3d(0, 0, 1, 45deg);
+}
+.close-icon div:last-child::after, .close-icon div:last-child::before {
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0.2s, opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0.18s;
+}
+.close-icon div::after, .close-icon div::before {
+    content: "";
+    display: block;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+/* Now you see it */
+.close-icon div::before {
+    background: none repeat scroll 0 0 #34d5cf;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+/* Now you don't */
+.close-icon div::after {
+    background: none repeat scroll 0 0 #ead918;
+    opacity: 0;
+    transform: translate3d(100%, 0px, 0px);
+}
+.close-icon:hover div::before {
+    opacity: 0;
+    transform: translate3d(-100%, 0px, 0px);
+}
+.close-icon:hover div::after {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+
+
+
+
+// #webdeveloper-hover {
+// 	display: none;
+// 	color: #fff;
+//   text-align: center;
+//   justify-content: center;
+// 	align-items: center;
+//   margin: 0 auto;
+// }
 
 .background-image {
   position: absolute;
@@ -89,7 +384,20 @@
   .desc {
     z-index: 2;
     position: relative;
-    top: 36%;
+		display: flex;
+	  flex-direction: column;
+	  flex-wrap: wrap;
+		// padding: 2em;
+		// color: #fff;
+		// text-transform: uppercase;
+		// font-size: 1.3rem;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	  height: 100%;
+    // top: 36%;
     text-align: center;
     color: white;
     text-shadow: 0px 0px 5px black;
@@ -98,13 +406,15 @@
     -ms-transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
+		padding: 0px;
+		margin: 0;
   }
 
   p {
     z-index: 2;
-    margin-top: -15px;
+    // margin-top: -5px;
     text-transform: uppercase;
-    font-size: 85%;
+    font-size: 0.8rem;
     font-family: 'Exo 2', sans-serif;
     display: none;
     transition: all 1s ease;
@@ -152,6 +462,7 @@
 
     h2 {
       font-family: "Nova Mono";
+			font-size: 4rem;
     }
 }
 
@@ -167,6 +478,7 @@
 
     h2 {
       font-family: 'Abril Fatface', cursive;
+			font-size: 3rem;
     }
 }
 
@@ -182,6 +494,7 @@
 
     h2 {
       font-family: 'Montserrat', sans-serif;
+			font-size: 3rem;
     }
 }
 
@@ -197,7 +510,8 @@
     }
 
     h2 {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Orbitron', sans-serif;
+			font-size: 3rem;
     }
 }
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Exo+2|Josefin+Sans|Montserrat|Nova+Mono");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Exo+2|Josefin+Sans|Montserrat|Nova+Mono|Orbitron");
 /* line 370, ../sass/components/_color.scss */
 .materialize-red {
   background-color: #e51c23 !important;
@@ -10110,17 +10110,365 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /*shape-rendering: crispEdges;*/
 }
 
-/* line 47, ../sass/materialize.scss */
-#webdeveloper-hover {
-  display: none;
-  color: #fff;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+/* line 46, ../sass/materialize.scss */
+.glitch {
+  color: white;
+  mix-blend-mode: lighten;
+}
+/* line 50, ../sass/materialize.scss */
+.glitch:before, .glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  clip: rect(0, 0, 0, 0);
+}
+/* line 60, ../sass/materialize.scss */
+.glitch:before {
+  left: -1px;
+  text-shadow: 1px 0 rgba(255, 0, 0, 0.7);
+}
+/* line 65, ../sass/materialize.scss */
+.glitch:after {
+  left: 1px;
+  text-shadow: -1px 0 rgba(0, 0, 255, 0.7);
+}
+/* line 71, ../sass/materialize.scss */
+.glitch:hover:before {
+  text-shadow: 4px 0 rgba(255, 0, 0, 0.7);
+  animation: glitch-loop-1 0.8s infinite ease-in-out alternate-reverse;
+}
+/* line 75, ../sass/materialize.scss */
+.glitch:hover:after {
+  text-shadow: -5px 0 rgba(0, 0, 255, 0.7);
+  animation: glitch-loop-2 0.8s infinite ease-in-out alternate-reverse;
 }
 
-/* line 56, ../sass/materialize.scss */
+@keyframes glitch-loop-1 {
+  0% {
+    clip: rect(36px, 9999px, 9px, 0);
+  }
+  25% {
+    clip: rect(25px, 9999px, 99px, 0);
+  }
+  50% {
+    clip: rect(50px, 9999px, 102px, 0);
+  }
+  75% {
+    clip: rect(30px, 9999px, 92px, 0);
+  }
+  100% {
+    clip: rect(91px, 9999px, 98px, 0);
+  }
+}
+@keyframes glitch-loop-2 {
+  0% {
+    top: -1px;
+    left: 1px;
+    clip: rect(65px, 9999px, 119px, 0);
+  }
+  25% {
+    top: -6px;
+    left: 4px;
+    clip: rect(79px, 9999px, 19px, 0);
+  }
+  50% {
+    top: -3px;
+    left: 2px;
+    clip: rect(68px, 9999px, 11px, 0);
+  }
+  75% {
+    top: 0px;
+    left: -4px;
+    clip: rect(95px, 9999px, 53px, 0);
+  }
+  100% {
+    top: -1px;
+    left: -1px;
+    clip: rect(31px, 9999px, 149px, 0);
+  }
+}
+/* Layout */
+/* line 100, ../sass/materialize.scss */
+.desc::before,
+.desc::after {
+  pointer-events: none;
+}
+
+/* line 105, ../sass/materialize.scss */
+h2 {
+  word-spacing: -0.15rem;
+  font-weight: 300;
+}
+
+/* line 110, ../sass/materialize.scss */
+h2 span {
+  display: block;
+  font-weight: 800;
+  font-size: 2.8rem;
+}
+
+/* line 115, ../sass/materialize.scss */
+h2, p {
+  margin: 0;
+}
+
+/* line 119, ../sass/materialize.scss */
+p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/* line 124, ../sass/materialize.scss */
+a {
+  text-transform: uppercase;
+  font-size: .6rem;
+  text-decoration: none;
+  color: #FFF;
+  display: block;
+  font-family: sans-serif;
+}
+
+/*-----------------*/
+/***** Hover *****/
+/*-----------------*/
+/* line 148, ../sass/materialize.scss */
+.effect-hover h2,
+.effect-hover h3,
+.effect-hover p,
+.effect-hover i {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+/* line 157, ../sass/materialize.scss */
+.effect-hover .desc::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border: 3px solid #fff;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  /* remove this bit if you want it to swing up */
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+}
+
+/* line 173, ../sass/materialize.scss */
+.effect-hover p:hover,
+.effect-hover p:focus {
+  opacity: 0.6;
+}
+
+/* Keeps things consistent */
+/* line 179, ../sass/materialize.scss */
+.effect-hover p,
+.effect-hover h3 {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+/* line 186, ../sass/materialize.scss */
+.effect-hover:hover .desc::before {
+  opacity: 1;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+}
+
+/* line 192, ../sass/materialize.scss */
+.effect-hover:hover h2 {
+  opacity: 0;
+  -webkit-transform: scale3d(0.8, 0.8, 1);
+  transform: scale3d(0.8, 0.8, 1);
+}
+
+/* line 197, ../sass/materialize.scss */
+.effect-hover:hover h3,
+.effect-hover:hover p {
+  opacity: 1;
+}
+
+/* line 201, ../sass/materialize.scss */
+.effect-hover:hover i {
+  -webkit-transform: scale3d(2.5, 2.5, 2);
+  transform: scale3d(2.5, 2.5, 2);
+}
+
+/* Overlays */
+/* line 207, ../sass/materialize.scss */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  z-index: 99;
+  overflow-x: hidden;
+  background: #eee;
+}
+
+/* Block works too, but flex is more...flexible */
+/* line 221, ../sass/materialize.scss */
+.overlay.open {
+  display: flex;
+}
+
+/* line 224, ../sass/materialize.scss */
+.hover-content {
+  font-size: 1.4rem;
+  padding: 10%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* button */
+/* line 231, ../sass/materialize.scss */
+.buy-button {
+  height: 50px;
+  width: 100%;
+  margin: 2rem 0;
+  position: relative;
+  background: #eee;
+  border: 3px solid #f9efb2;
+}
+
+/* line 239, ../sass/materialize.scss */
+.buy-button > span {
+  display: block;
+  position: relative;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #1f1f22;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  z-index: 10;
+  line-height: 60px;
+}
+
+/* line 252, ../sass/materialize.scss */
+.buy-button::after, .buy-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid #f9efb2;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, ease-in-out .3s;
+}
+
+/* line 261, ../sass/materialize.scss */
+.buy-button::before {
+  background: #FFF;
+  margin: 0px 0 0 0px;
+  top: 5px;
+  left: 5px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: 1;
+}
+
+/* line 271, ../sass/materialize.scss */
+.buy-button:hover span,
+.buy-button:hover::before {
+  transform: translate3d(-4px, -4px, 0px);
+}
+
+/* line 275, ../sass/materialize.scss */
+.buy-button:hover::before {
+  background: #f9efb2;
+}
+
+/* Close Icon animated */
+/* Thanks to @arthurhamon */
+/* line 280, ../sass/materialize.scss */
+.close-icon {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+}
+
+/* Test your cubic beziers here http://cubic-bezier.com/ */
+/* line 289, ../sass/materialize.scss */
+.close-icon div {
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  width: 36px;
+}
+
+/* line 297, ../sass/materialize.scss */
+.close-icon div:first-child {
+  transform: translate3d(0px, 10px, 0px) rotate3d(0, 0, 1, -45deg);
+}
+
+/* line 300, ../sass/materialize.scss */
+.close-icon div:first-child::after, .close-icon div:first-child::before {
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+/* line 303, ../sass/materialize.scss */
+.close-icon div:last-child {
+  transform: translate3d(0px, 8px, 0px) rotate3d(0, 0, 1, 45deg);
+}
+
+/* line 306, ../sass/materialize.scss */
+.close-icon div:last-child::after, .close-icon div:last-child::before {
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0.2s, opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0.18s;
+}
+
+/* line 309, ../sass/materialize.scss */
+.close-icon div::after, .close-icon div::before {
+  content: "";
+  display: block;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+/* Now you see it */
+/* line 318, ../sass/materialize.scss */
+.close-icon div::before {
+  background: none repeat scroll 0 0 #34d5cf;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* Now you don't */
+/* line 324, ../sass/materialize.scss */
+.close-icon div::after {
+  background: none repeat scroll 0 0 #ead918;
+  opacity: 0;
+  transform: translate3d(100%, 0px, 0px);
+}
+
+/* line 329, ../sass/materialize.scss */
+.close-icon:hover div::before {
+  opacity: 0;
+  transform: translate3d(-100%, 0px, 0px);
+}
+
+/* line 333, ../sass/materialize.scss */
+.close-icon:hover div::after {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* line 351, ../sass/materialize.scss */
 .background-image {
   position: absolute;
   z-index: 1;
@@ -10139,7 +10487,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   -o-transition: all 1s ease;
 }
 
-/* line 73, ../sass/materialize.scss */
+/* line 368, ../sass/materialize.scss */
 .anim, .anim svg {
   position: relative;
   width: 100%;
@@ -10148,22 +10496,30 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding: 0;
 }
 
-/* line 80, ../sass/materialize.scss */
+/* line 375, ../sass/materialize.scss */
 .anim path {
   stroke-width: 3;
 }
 
-/* line 84, ../sass/materialize.scss */
+/* line 379, ../sass/materialize.scss */
 #webdeveloper, #translator, #foster, #madclouds {
   overflow: hidden;
   position: absolute;
   z-index: 1;
 }
-/* line 89, ../sass/materialize.scss */
+/* line 384, ../sass/materialize.scss */
 #webdeveloper .desc, #translator .desc, #foster .desc, #madclouds .desc {
   z-index: 2;
   position: relative;
-  top: 36%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   text-align: center;
   color: white;
   text-shadow: 0px 0px 5px black;
@@ -10172,13 +10528,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   -ms-transition: all 1s ease;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
+  padding: 0px;
+  margin: 0;
 }
-/* line 103, ../sass/materialize.scss */
+/* line 413, ../sass/materialize.scss */
 #webdeveloper p, #translator p, #foster p, #madclouds p {
   z-index: 2;
-  margin-top: -15px;
   text-transform: uppercase;
-  font-size: 85%;
+  font-size: 0.8rem;
   font-family: 'Exo 2', sans-serif;
   display: none;
   transition: all 1s ease;
@@ -10188,7 +10545,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   -o-transition: all 1s ease;
 }
 
-/* line 121, ../sass/materialize.scss */
+/* line 431, ../sass/materialize.scss */
 #webdeveloper:hover p, #translator:hover p, #foster:hover p, #madclouds:hover p {
   display: inline;
   transition: all 1s ease;
@@ -10197,7 +10554,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
 }
-/* line 130, ../sass/materialize.scss */
+/* line 440, ../sass/materialize.scss */
 #webdeveloper:hover .background-image, #translator:hover .background-image, #foster:hover .background-image, #madclouds:hover .background-image {
   -webkit-filter: grayscale(0%);
   /* Safari 6.0 - 9.0 */
@@ -10214,67 +10571,71 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /* IE6 and 7 */
 }
 
-/* line 144, ../sass/materialize.scss */
+/* line 454, ../sass/materialize.scss */
 #webdeveloper {
   height: 50% !important;
   width: 50% !important;
 }
-/* line 149, ../sass/materialize.scss */
+/* line 459, ../sass/materialize.scss */
 #webdeveloper .background-image {
   background-image: url("../img/header.jpg");
 }
-/* line 153, ../sass/materialize.scss */
+/* line 463, ../sass/materialize.scss */
 #webdeveloper h2 {
   font-family: "Nova Mono";
+  font-size: 4rem;
 }
 
-/* line 158, ../sass/materialize.scss */
+/* line 469, ../sass/materialize.scss */
 #translator {
   height: 50% !important;
   width: 50% !important;
   margin-left: 50%;
 }
-/* line 164, ../sass/materialize.scss */
+/* line 475, ../sass/materialize.scss */
 #translator .background-image {
   background-image: url("../img/translations.jpg");
 }
-/* line 168, ../sass/materialize.scss */
+/* line 479, ../sass/materialize.scss */
 #translator h2 {
   font-family: 'Abril Fatface', cursive;
+  font-size: 3rem;
 }
 
-/* line 173, ../sass/materialize.scss */
+/* line 485, ../sass/materialize.scss */
 #foster {
   height: 50% !important;
   width: 50% !important;
   top: 50%;
 }
-/* line 179, ../sass/materialize.scss */
+/* line 491, ../sass/materialize.scss */
 #foster .background-image {
   background-image: url("../img/foster.JPG");
 }
-/* line 183, ../sass/materialize.scss */
+/* line 495, ../sass/materialize.scss */
 #foster h2 {
   font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
 }
 
-/* line 188, ../sass/materialize.scss */
+/* line 501, ../sass/materialize.scss */
 #madclouds {
   height: 50% !important;
   width: 50% !important;
   top: 50%;
   left: 50%;
 }
-/* line 195, ../sass/materialize.scss */
+/* line 508, ../sass/materialize.scss */
 #madclouds .background-image {
   background-image: url("https://static.tumblr.com/fd4f9c57ad39c51dac01f6739a0757b2/z22p5iv/58yow335e/tumblr_static_5jdt19geapogocg0ko8k0448g.png");
 }
-/* line 199, ../sass/materialize.scss */
+/* line 512, ../sass/materialize.scss */
 #madclouds h2 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
 }
 
-/* line 204, ../sass/materialize.scss */
+/* line 518, ../sass/materialize.scss */
 #about {
   z-index: 3;
   position: absolute;
@@ -10290,7 +10651,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   transition: transform .8s ease-in-out;
 }
 
-/* line 217, ../sass/materialize.scss */
+/* line 531, ../sass/materialize.scss */
 #about:hover {
   z-index: 4;
   -webkit-transform: rotate(360deg);
